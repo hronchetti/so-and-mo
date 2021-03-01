@@ -1,0 +1,22 @@
+<div class="basket-drawer" id="basket-drawer">
+  <header class="basket-drawer-header">
+    <button
+      class="button-circle button-circle-light-icon"
+      onclick="hideAllNavPanels()"
+    >
+      <span class="icon-cross"></span>
+    </button>
+    <span class="basket-drawer-header-title text-centered">Your basket</span>
+  </header>
+  <section class="basket-drawer-body">
+    @@include('./basket-drawer-item.html')
+  </section>
+  <footer>
+    <section>
+      <div>Total</div>
+      <div>£179.99</div>
+    </section>
+    <button class="button-primary">Checkout</button>
+    <span>Discount codes applied at checkout</span>
+  </footer>
+</div>

@@ -1,0 +1,47 @@
+@@include('./mobile-menu.html')
+<nav class="nav">
+  <section class="nav-announcement text-centered">
+    FREE Next Day Delivery (Before 12pm)
+  </section>
+  <section class="nav-layout">
+    <div class="nav-layout-left">
+      <section class="nav-mobile">
+        <button class="button-circle" onclick="showNavPanel('mobile-menu')">
+          <span class="icon-hamburger"></span>
+        </button>
+      </section>
+      <section class="nav-desktop">
+        <ul>
+          <li>
+            <a href="/products/performance-liquid-lawn-feed.html">Shop now</a>
+          </li>
+          <li>
+            <span>Box extras</span>
+            <ul>
+              <li>
+                <a href="/products/standard.html">Colour indicator</a>
+              </li>
+              <li>
+                <a href="/products/standard.html">Feed sprayer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <a class="nav-layout-center" href="/">@@include('./logo.html')</a>
+    <div class="nav-layout-right">
+      <section class="nav-desktop">
+        <ul>
+          <li><a href="/our-story.html">Our story</a></li>
+          <li><a href="/frequently-asked-questions.html">FAQs</a></li>
+        </ul>
+      </section>
+      <button class="button-circle" onclick="showNavPanel('basket-drawer')">
+        <span class="icon-bag"></span>
+      </button>
+    </div>
+  </section>
+</nav>
+@@include('./basket-drawer.html')
+<div class="overlay" id="overlay" onclick="hideAllNavPanels()"></div>

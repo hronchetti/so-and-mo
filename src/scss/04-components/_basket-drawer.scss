@@ -1,0 +1,32 @@
+.basket-drawer {
+  @include animation-preset;
+  position: fixed;
+  background-color: white;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 27.5rem;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 600ms ease-in;
+
+  &.active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .basket-drawer-header {
+    padding: 0.25rem 1rem;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2.5rem 1fr 2.5rem;
+    border-bottom: 1px solid $grey-light;
+
+    .basket-drawer-header-title {
+      display: block;
+      font: 600 0.875rem/1.125rem $font-secondary;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+  }
+}

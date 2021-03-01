@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="title" content="Lorem ipsum dolor sit.">
-    <meta name="description" content="Lorem ipsum dolor sit.">
-
-    <!-- Style -->
-    <link rel="stylesheet" href="css/app.min.css" />
-
-    <!-- Title -->
-    <title>Boilerplate</title>
-</head>
-
-<body>
-
-
+  <head>
+    @@include('./components/head.html')
+    <title>Homepage</title>
+  </head>
+  <body>
+    @@include('./components/nav/index.html')
+    <header class="header-homepage">
+      <h1 class="heading-extra-large">The lawn feed that actually works</h1>
+      <p>Ensure your lawn never goes hungry again</p>
+      <a class="button-blue" href="/products/performance-liquid-lawn-feed.html"
+        >Shop now</a
+      >
+    </header>
     <!-- Scripts -->
-    <script src="js/app.min.js"></script>
-</body>
-
+    <script src="js/index.min.js"></script>
+  </body>
 </html>

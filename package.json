@@ -1,16 +1,21 @@
 {
-  "name": "boilerplate",
-  "version": "2.0.0",
-  "description": "Simple frontend boilerplate using Gulp",
+  "name": "so-and-mo",
+  "version": "1.0.0",
+  "description": "A Shopify store for selling performance lawn feed",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "clean": "gulp clean"
   },
   "author": "Constantin Ross",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-env": "^7.13.5",
     "browser-sync": "^2.26.12",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-file-include": "^2.3.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2"
