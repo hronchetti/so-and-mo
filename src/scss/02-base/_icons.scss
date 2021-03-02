@@ -1,19 +1,19 @@
 @font-face {
-  font-family: 'icomoon';
-  src: url('../../icons/icomoon.eot?kjeyza');
-  src: url('../../icons/icomoon.eot?kjeyza#iefix') format('embedded-opentype'),
-    url('../../icons/icomoon.ttf?kjeyza') format('truetype'),
-    url('../../icons/icomoon.woff?kjeyza') format('woff'),
-    url('../../icons/icomoon.svg?kjeyza#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("../../icons/icomoon.eot?kjeyza");
+  src: url("../../icons/icomoon.eot?kjeyza#iefix") format("embedded-opentype"),
+    url("../../icons/icomoon.ttf?kjeyza") format("truetype"),
+    url("../../icons/icomoon.woff?kjeyza") format("woff"),
+    url("../../icons/icomoon.svg?kjeyza#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^='icon-'],
-[class*=' icon-'] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,42 +26,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-small:before {
+  content: "\e90a";
+}
 .icon-arrow-big:before {
-  content: '\e900';
+  content: "\e900";
 }
 .icon-bag:before {
-  content: '\e901';
+  content: "\e901";
 }
-.icon-chevron:before {
-  content: '\e902';
+.icon-chevron-down:before {
+  content: "\e902";
 }
 .icon-cross:before {
-  content: '\e903';
+  content: "\e903";
 }
 .icon-facebook:before {
-  content: '\e904';
+  content: "\e904";
 }
 .icon-hamburger:before {
-  content: '\e905';
+  content: "\e905";
 }
 .icon-instagram:before {
-  content: '\e906';
+  content: "\e906";
 }
 .icon-linkedin:before {
-  content: '\e907';
+  content: "\e907";
 }
 .icon-minus:before {
-  content: '\e908';
+  content: "\e908";
 }
 .icon-plus:before {
-  content: '\e909';
+  content: "\e909";
 }
 .icon-tick:before {
-  content: '\e90b';
+  content: "\e90b";
 }
 .icon-twitter:before {
-  content: '\e90d';
+  content: "\e90d";
 }
 .icon-youtube:before {
-  content: '\e90e';
+  content: "\e90e";
 }

@@ -32,21 +32,22 @@
       display: block;
     }
 
-    .mobile-menu-link-heading,
     .mobile-menu-link {
       font: 600 1rem/1.25rem $font-secondary;
       letter-spacing: 2px;
       text-transform: uppercase;
       text-decoration: none;
       display: block;
-    }
-
-    .mobile-menu-link {
       padding: 1rem 0;
       color: $grey-extra-dark;
     }
 
     .mobile-menu-link-heading {
+      font: 600 1rem/1.25rem $font-secondary;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
       margin: 1.25rem 0 0.875rem 0;
       color: $grey-medium;
     }

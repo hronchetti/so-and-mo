@@ -9,14 +9,59 @@
     <span class="basket-drawer-header-title text-centered">Your basket</span>
   </header>
   <section class="basket-drawer-body">
-    @@include('./basket-drawer-item.html')
+    <!-- prettier-ignore -->
+    @@include('./basket-drawer-item.html', {
+      "product": "The Feed Box & Colour Indicator", 
+      "details": "Lawn size: 0 - 250m&sup2;", 
+      "price": "£179.99", 
+    })
+    @@include('./basket-drawer-item.html', {
+      "product": "Backpack sprayer", 
+      "details": "", 
+      "price": "£79.99", 
+    })
+    <ul class="transaction-rows">
+      <li class="transaction-row">
+        <span class="transaction-row-left">Subtotal</span>
+        <span class="transaction-row-right">£259.99</span>
+      </li>
+      <li class="transaction-row">
+        <span class="transaction-row-left">Delivery</span>
+        <span class="transaction-row-right">Free</span>
+      </li>
+    </ul>
   </section>
-  <footer>
-    <section>
-      <div>Total</div>
-      <div>£179.99</div>
-    </section>
-    <button class="button-primary">Checkout</button>
-    <span>Discount codes applied at checkout</span>
+  <footer class="basket-drawer-footer">
+    <ul class="transaction-rows">
+      <li class="transaction-row">
+        <span class="transaction-row-left">Total</span>
+        <span class="transaction-row-right">£259.99</span>
+      </li>
+    </ul>
+    <div class="checkout">
+      <a href="#" class="button-blue">Checkout</a>
+      <span class="checkout-note">Discount codes applied at checkout</span>
+      <div class="checkout-payment-options">
+        <!-- ACTIVE PATYMENT OPTION ICONS -->
+        <div class="checkout-payment-options-card">
+          @@include('./example-payment-option.html')
+        </div>
+        <div class="checkout-payment-options-card">
+          @@include('./example-payment-option.html')
+        </div>
+        <div class="checkout-payment-options-card">
+          @@include('./example-payment-option.html')
+        </div>
+        <div class="checkout-payment-options-card">
+          @@include('./example-payment-option.html')
+        </div>
+        <div class="checkout-payment-options-card">
+          @@include('./example-payment-option.html')
+        </div>
+        <div class="checkout-payment-options-card">
+          @@include('./example-payment-option.html')
+        </div>
+      </div>
+    </div>
   </footer>
 </div>

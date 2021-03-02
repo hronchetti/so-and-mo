@@ -10,33 +10,43 @@
           <span class="icon-hamburger"></span>
         </button>
       </section>
-      <section class="nav-desktop">
-        <ul>
-          <li>
-            <a href="/products/performance-liquid-lawn-feed.html">Shop now</a>
-          </li>
-          <li>
-            <span>Box extras</span>
-            <ul>
-              <li>
-                <a href="/products/standard.html">Colour indicator</a>
-              </li>
-              <li>
-                <a href="/products/standard.html">Feed sprayer</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
+      <ul class="nav-link-group nav-desktop">
+        <li>
+          <a class="nav-link" href="/products/performance-liquid-lawn-feed.html"
+            >Shop now</a
+          >
+        </li>
+        <li class="nav-link-dropdown" id="nav-dropdown-desktop">
+          <button
+            class="nav-link-dropdown-button"
+            onclick="toggleNavDropdownDesktop()"
+          >
+            <span class="nav-link">Box extras</span>
+            <span class="icon-chevron-down"></span>
+          </button>
+          <ul class="nav-link-dropdown-contents">
+            <li>
+              <a class="nav-link" href="/products/standard.html"
+                >Colour indicator</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/products/standard.html"
+                >Feed sprayer</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <a class="nav-layout-center" href="/">@@include('./logo.html')</a>
     <div class="nav-layout-right">
-      <section class="nav-desktop">
-        <ul>
-          <li><a href="/our-story.html">Our story</a></li>
-          <li><a href="/frequently-asked-questions.html">FAQs</a></li>
-        </ul>
-      </section>
+      <ul class="nav-link-group nav-desktop">
+        <li><a class="nav-link" href="/our-story.html">Our story</a></li>
+        <li>
+          <a class="nav-link" href="/frequently-asked-questions.html">FAQs</a>
+        </li>
+      </ul>
       <button class="button-circle" onclick="showNavPanel('basket-drawer')">
         <span class="icon-bag"></span>
       </button>
@@ -44,4 +54,4 @@
   </section>
 </nav>
 @@include('./basket-drawer.html')
-<div class="overlay" id="overlay" onclick="hideAllNavPanels()"></div>
+<div class="overlay" id="nav-overlay" onclick="hideAllNavPanels()"></div>

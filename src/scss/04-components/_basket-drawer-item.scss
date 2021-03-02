@@ -1,16 +1,46 @@
 .basket-drawer-item {
+  display: grid;
+  grid-template-columns: 4rem 1fr 3.5rem;
+  gap: 0 1rem;
+  font: 300 0.875rem/1.25rem $font;
+  color: $grey-dark;
+  padding: 1rem 0 0.5rem;
+  border-bottom: 1px solid $grey-light;
+
   .basket-drawer-item-image {
+    background-color: $green;
+    width: 100%;
+    padding: 0.125rem 0.25rem;
   }
 
   .basket-drawer-item-name {
+    display: block;
+    font: 500 1rem/1.25rem $font;
+    color: $grey-extra-dark;
+    margin-bottom: 0.5rem;
   }
 
   .basket-drawer-item-detail {
+    display: block;
+    margin: 0.25rem 0;
   }
 
   .basket-drawer-item-button {
-  }
+    @include button-preset;
+    padding: 0.25rem 0.25rem 0.5rem 0;
+    font: 300 0.875rem/1.25rem $font;
+    letter-spacing: 0.25px;
+    text-decoration: underline;
+    cursor: pointer;
 
-  .basket-drawer-item-price {
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    &:focus {
+      text-decoration: none;
+    }
   }
 }

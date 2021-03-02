@@ -1,5 +1,48 @@
 .wrapper-width {
+  display: block;
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .wrapper-height {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper-width {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .wrapper-height {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .wrapper-width {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .wrapper-height {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1344px) {
+  .wrapper-width {
+    max-width: 78rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wrapper-height {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
 }
