@@ -39,3 +39,13 @@ document.addEventListener("click", (event) => {
     }
   }
 })
+
+// Footer
+
+const getFooterYear = () => {
+  document.getElementById("footer-year").innerHTML = new Date().getFullYear()
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  getFooterYear()
+})

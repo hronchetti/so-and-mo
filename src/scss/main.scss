@@ -11,6 +11,7 @@
 @import "02-base/site";
 
 // 03 UTILITIES - Re-usable classes using OOCSS logic
+@import "03-utilities/forms";
 @import "03-utilities/hidden";
 @import "03-utilities/overlay";
 @import "03-utilities/text-align";
@@ -22,6 +23,7 @@
 @import "04-components/buttons";
 @import "04-components/mobile-menu";
 @import "04-components/nav";
+@import "04-components/footer";
 
 // 05 PAGES - style adjustments unique to specific pages
 @import "05-pages/homepage";

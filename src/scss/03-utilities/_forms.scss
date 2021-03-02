@@ -1,0 +1,33 @@
+label {
+  display: block;
+  font: 500 1rem/1.25rem $font;
+  margin-bottom: 0.625rem;
+  color: $grey-dark;
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 1px solid $grey-light;
+  display: block;
+  border-radius: 0.75rem;
+  background-color: white;
+  font: 300 1rem/1.75rem $font;
+  color: $grey-extra-dark;
+  padding: 0.625rem 1.125rem;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+    border-color: $green;
+  }
+
+  &:placeholder-shown,
+  &::placeholder {
+    color: $grey-medium;
+  }
+}
+
+.form-error {
+  display: block;
+  min-height: 1rem;
+}
