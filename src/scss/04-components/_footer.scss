@@ -36,6 +36,16 @@
         font: 300 1rem/1.75rem $font;
         text-decoration: none;
         padding: 0.5rem 0;
+
+        &:focus {
+          color: $green;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            color: $green;
+          }
+        }
       }
     }
 
@@ -145,6 +155,12 @@
         }
       }
 
+      .footer-link-group {
+        .footer-link {
+          margin-bottom: 1rem;
+          padding: 0;
+        }
+      }
       .footer-extra-links {
         @include flex-justify-start;
 
