@@ -4,6 +4,7 @@
   border-bottom: 1px solid $grey-light;
   top: 0;
   background-color: white;
+  z-index: 1000;
 
   .nav-announcement {
     background-color: $blue-dark;
@@ -219,6 +220,18 @@
     .nav-layout {
       padding-top: 0.875rem;
       padding-bottom: 0.875rem;
+
+      .nav-link {
+        @media (hover: hover) {
+          &:hover {
+            color: $green;
+          }
+        }
+
+        &:focus {
+          color: $green;
+        }
+      }
     }
   }
 }

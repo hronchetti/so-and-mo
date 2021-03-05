@@ -1,12 +1,12 @@
 .wrapper-width {
-  display: block;
   margin: 0 auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
 .wrapper-height {
-  padding-top: 1rem;
+  // padding-top: 1rem;
+  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
@@ -17,7 +17,8 @@
   }
 
   .wrapper-height {
-    padding-top: 1.5rem;
+    // padding-top: 1.5rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
   }
 }
@@ -29,7 +30,8 @@
   }
 
   .wrapper-height {
-    padding-top: 2rem;
+    // padding-top: 2rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
   }
 }
@@ -42,7 +44,8 @@
   }
 
   .wrapper-height {
-    padding-top: 3rem;
+    // padding-top: 3rem;
+    padding-top: 4rem;
     padding-bottom: 4rem;
   }
 }

@@ -1,0 +1,54 @@
+.dropbox-image-section {
+  .dropbox-image {
+    position: relative;
+
+    .dropbox-image-image {
+      width: calc(100% - 0.5rem);
+      padding-bottom: calc(100% - 0.5rem);
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.75rem;
+      }
+    }
+
+    .dropbox-image-box {
+      border-radius: 0.75rem;
+      display: block;
+      background-color: $green;
+      position: absolute;
+      left: 0.5rem;
+      top: 0.5rem;
+      width: calc(100% - 0.5rem);
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .dropbox-image-section {
+    .dropbox-image {
+      padding-bottom: 1.5rem;
+      order: 2;
+      width: calc(100% - 4rem) !important;
+      max-width: 32rem !important;
+
+      .dropbox-image-image {
+        width: calc(100% - 1.5rem);
+        padding-bottom: calc(100% - 1.5rem);
+      }
+
+      .dropbox-image-box {
+        left: 1.5rem;
+        top: 1.5rem;
+        width: calc(100% - 1.5rem);
+        height: calc(100% - 1.5rem);
+      }
+    }
+  }
+}

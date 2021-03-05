@@ -1,0 +1,165 @@
+.header-homepage {
+  color: $blue-dark;
+  padding: 1.5rem 0 8.5rem;
+  position: relative;
+  overflow: hidden;
+
+  .heading-extra-large {
+    max-width: 25rem;
+    margin: 0 auto 0.75rem;
+  }
+
+  .header-homepage-value-proposition {
+    font: 300 1rem/1.625rem $font;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 15rem;
+    color: $blue-dark;
+  }
+
+  .header-homepage-bottles {
+    position: absolute;
+    max-width: none;
+    width: calculate-rem(575px);
+    left: 50%;
+    top: 10.5rem; // 2 Rows of heading @ 2.5rem each (5rem) + heading margin-bottom @ 0.75rem + header padding-top @ 1.5rem + 2 rows of paragraph @ 1.625rem each (3.25rem)
+    transform: translate3d(-50%, 0, 0);
+    pointer-events: none;
+  }
+}
+
+.benefits {
+  margin-bottom: 1.5rem;
+
+  .benefit {
+    .benefit-illustration {
+      width: 3rem;
+    }
+
+    .benefit-heading {
+      margin: 0.75rem 0 0.5rem;
+    }
+
+    .benefit-description {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .header-homepage {
+    .header-homepage-bottles {
+      width: calculate-rem(650px);
+      top: 8.875rem; // 2 Rows of heading @ 2.5rem each (5rem) + heading margin-bottom @ 0.75rem + header padding-top @ 1.5rem + 1 row of paragraph @ 1.625rem
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .header-homepage {
+    .heading-extra-large {
+      max-width: 30rem;
+    }
+
+    .header-homepage-bottles {
+      width: calculate-rem(800px);
+      top: 7.25rem; // 2 Rows of heading @ 2.5rem each (5rem) + heading margin-bottom @ 0.75rem + header padding-top @ 1.5rem
+    }
+  }
+
+  .benefits {
+    .benefit {
+      .benefit-illustration {
+        width: 4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .header-homepage {
+    padding: 2.5rem 0 12.5rem;
+
+    .heading-extra-large {
+      margin-bottom: 1.25rem;
+    }
+
+    .header-homepage-bottles {
+      width: calculate-rem(1100px);
+      top: 6rem; // 1 Row of heading @ 3.5rem + header padding-top @ 2.5rem
+    }
+  }
+
+  .benefits {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .benefit {
+      .benefit-illustration {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .benefit-description {
+        max-width: 15rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .benefit-button {
+    @include flex-justify-center;
+
+    .button-blue {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .header-homepage {
+    padding: 3rem 0 15rem;
+
+    .heading-extra-large {
+      max-width: 37.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .header-homepage-value-proposition {
+      font-size: 1.125rem;
+      line-height: 2rem;
+      max-width: 22.5rem;
+    }
+
+    .header-homepage-bottles {
+      width: calculate-rem(1600px);
+      top: 1.5rem;
+    }
+  }
+
+  .benefits {
+    margin: 2rem 0 2.5rem;
+
+    .benefit {
+      .benefit-illustration {
+        width: 8rem;
+      }
+
+      .benefit-heading {
+        margin: 1.25rem 0 0.625rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .header-homepage {
+    padding: 4rem 0 17.5rem;
+
+    .header-homepage-bottles {
+      width: calculate-rem(1800px);
+      top: 0.75rem;
+    }
+  }
+}

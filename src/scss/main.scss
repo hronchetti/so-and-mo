@@ -11,19 +11,30 @@
 @import "02-base/site";
 
 // 03 UTILITIES - Re-usable classes using OOCSS logic
+@import "03-utilities/backgrounds";
 @import "03-utilities/forms";
+@import "03-utilities/grids";
 @import "03-utilities/hidden";
 @import "03-utilities/overlay";
 @import "03-utilities/text-align";
 @import "03-utilities/wrappers";
+@import "03-utilities/image-section";
 
 // 04 COMPONENTS - Re-usable classes for whole elements / elements groups
 @import "04-components/basket-drawer";
 @import "04-components/basket-drawer-item";
 @import "04-components/buttons";
+@import "04-components/divider";
+@import "04-components/dropbox-image";
+@import "04-components/footer";
 @import "04-components/mobile-menu";
 @import "04-components/nav";
-@import "04-components/footer";
+@import "04-components/tick-bullets";
+@import "04-components/video-button";
 
-// 05 PAGES - style adjustments unique to specific pages
-@import "05-pages/homepage";
+// 05 SECTIONS - Re-usable
+@import "05-sections/sustainability";
+@import "05-sections/product-guarantee";
+
+// 06 PAGES - style adjustments unique to specific pages
+@import "06-pages/homepage";
