@@ -1,0 +1,369 @@
+.product-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100rem;
+  margin: 0 auto;
+
+  .product-header-images-wrapper {
+    padding: 1rem 0;
+
+    .product-header-images {
+      .product-header-images-preview {
+        padding: 0 4rem;
+        position: relative;
+
+        img {
+          max-width: 90%;
+          margin: 0 auto;
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+
+        .product-header-images-preview-button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          padding: 0.625rem;
+
+          &:first-of-type {
+            left: 0.75rem;
+          }
+
+          &:last-of-type {
+            right: 0.75rem;
+          }
+        }
+      }
+
+      .product-header-images-thumbnails {
+        @include flex-justify-center;
+        margin-top: 0.75rem;
+
+        .product-header-images-thumbnail {
+          @include button-preset;
+          margin: 0 0.25rem;
+          border: 0.125rem solid transparent;
+          cursor: pointer;
+
+          &.active {
+            border-color: white;
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              border-color: white;
+            }
+          }
+
+          img {
+            height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .product-header-content {
+    padding: 1rem 1.25rem 0;
+
+    .select-wrapper {
+      max-width: 284px;
+    }
+
+    .product-header-options {
+      margin-top: 0.75rem;
+      @include flex-space-between;
+
+      .product-header-option {
+        width: calc((100% - 1.5rem) / 3);
+        position: relative;
+        text-align: center;
+        font: 300 0.6875rem/0.9375rem $font;
+        margin: 0;
+
+        .product-header-option-header {
+          height: calculate-rem(19px);
+          pointer-events: none;
+
+          .product-header-option-hint {
+            padding: 0.125rem 0.25rem;
+            background-color: $green;
+            display: block;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+            text-align: center;
+            color: $grey-extra-dark;
+          }
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+
+          @media (hover: hover) {
+            &:hover + .product-header-option-body {
+              background-color: $grey-extra-light;
+            }
+          }
+
+          &:focus-visible + .product-header-option-body {
+            outline: $green auto 1px;
+          }
+
+          &:checked + .product-header-option-body {
+            background-color: $blue-dark;
+            border-color: $blue-dark;
+
+            .product-header-option-price {
+              color: white;
+            }
+
+            .product-header-option-name {
+              color: $grey-light;
+            }
+          }
+        }
+
+        .product-header-option-body {
+          pointer-events: none;
+          border: 1px solid $grey-light;
+          border-radius: 0.75rem;
+          padding: 0.375rem 0.25rem;
+          height: calc(100% - 19px);
+
+          &.product-header-option-body-hint {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-top-color: transparent;
+          }
+
+          .product-header-option-price {
+            display: block;
+            font-size: 0.75rem;
+            line-height: 1.5rem;
+            letter-spacing: 0;
+            color: $grey-extra-dark;
+
+            .product-header-option-price-currency {
+              vertical-align: top;
+              line-height: 1rem;
+              display: inline-block;
+              margin-right: 1px;
+            }
+
+            .product-header-option-price-value {
+              font-size: 1.5rem;
+              display: inline-block;
+            }
+          }
+
+          .product-header-option-name {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .product-header-guidance {
+      display: block;
+      color: $grey-dark;
+      margin: 0.75rem 0 1rem;
+    }
+
+    .product-header-order-button {
+      display: block;
+    }
+
+    .product-header-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+      margin-top: 1rem;
+
+      .product-header-fact {
+        text-align: center;
+
+        .product-header-fact-illustration {
+          svg {
+            margin: 0 auto;
+            height: 1.25rem;
+
+            path {
+              &:last-of-type {
+                fill: $blue-extra-dark;
+              }
+            }
+          }
+        }
+
+        .product-header-fact-text {
+          margin-top: 0.625rem;
+          display: block;
+          font: 600 0.75rem/1rem $font-secondary;
+          letter-spacing: 1.4px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.how-to-video {
+  width: 100%;
+  padding-bottom: 75%;
+  margin: 0 auto;
+  position: relative;
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .product-header {
+    .product-header-content {
+      padding: 1.25rem 2rem 0;
+
+      .product-header-options {
+        .product-header-option {
+          width: calc((100% - 2.5rem) / 3);
+          font-size: 0.875rem;
+          line-height: 1.125rem;
+          letter-spacing: 0.25px;
+
+          .product-header-option-header {
+            height: 1.5rem;
+
+            .product-header-option-hint {
+              padding: calculate-rem(3px) 0.25rem;
+            }
+          }
+
+          .product-header-option-body {
+            height: calc(100% - 1.5rem);
+            padding: 0.5rem 1rem 0.75rem;
+
+            .product-header-option-price {
+              line-height: 2rem;
+              font-size: 1rem;
+
+              .product-header-option-price-value {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .product-header-guidance {
+        margin: 1.25rem 0;
+      }
+
+      .product-header-facts {
+        margin-top: 1.5rem;
+        gap: 2rem;
+
+        .product-header-fact {
+          .product-header-fact-illustration {
+            svg {
+              height: 1.75rem;
+            }
+          }
+
+          .product-header-fact-text {
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .how-to-video {
+    padding-bottom: 0;
+    width: 30rem;
+    height: 22.5rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .product-header {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid $grey-extra-light;
+
+    .product-header-images-wrapper {
+      height: 100%;
+      padding: 2rem 0;
+      @include flex-justify-center;
+      align-items: center;
+
+      .product-header-images {
+        .product-header-images-preview {
+          padding: 0 5rem;
+
+          img {
+            max-width: 85%;
+          }
+
+          .product-header-images-preview-button {
+            &:first-of-type {
+              left: 2rem;
+            }
+
+            &:last-of-type {
+              right: 2rem;
+            }
+          }
+        }
+
+        .product-header-images-thumbnails {
+          margin-top: 2rem;
+
+          .product-header-images-thumbnail {
+            margin: 0 0.375rem;
+
+            img {
+              height: 3rem;
+            }
+          }
+        }
+      }
+    }
+
+    .product-header-content {
+      padding: 1.5rem 3rem;
+
+      .product-header-options {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+
+  .how-to-video {
+    margin-top: 2.5rem;
+    width: 40rem;
+    height: 30rem;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .product-header {
+    .product-header-content {
+      padding: 2rem 4rem 2.5rem;
+    }
+  }
+}

@@ -18,16 +18,21 @@
 @import "03-utilities/overlay";
 @import "03-utilities/text-align";
 @import "03-utilities/wrappers";
-@import "03-utilities/image-section";
+@import "03-utilities/rich-text";
 
 // 04 COMPONENTS - Re-usable classes for whole elements / elements groups
+@import "04-components/accordions";
 @import "04-components/basket-drawer";
 @import "04-components/basket-drawer-item";
+@import "04-components/bottle-nutrients";
+@import "04-components/bottle-viewer";
 @import "04-components/buttons";
 @import "04-components/divider";
 @import "04-components/dropbox-image";
 @import "04-components/footer";
+@import "04-components/image-section";
 @import "04-components/mobile-menu";
+@import "04-components/modal";
 @import "04-components/nav";
 @import "04-components/tick-bullets";
 @import "04-components/video-button";
@@ -38,3 +43,4 @@
 
 // 06 PAGES - style adjustments unique to specific pages
 @import "06-pages/homepage";
+@import "06-pages/product";

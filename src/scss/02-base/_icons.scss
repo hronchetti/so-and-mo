@@ -38,6 +38,16 @@
 .icon-chevron-down:before {
   content: "\e902";
 }
+.icon-chevron-left:before {
+  display: block;
+  content: "\e902";
+  transform: rotate(90deg);
+}
+.icon-chevron-right:before {
+  display: block;
+  content: "\e902";
+  transform: rotate(-90deg);
+}
 .icon-cross:before {
   content: "\e903";
 }

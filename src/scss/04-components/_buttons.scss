@@ -93,3 +93,20 @@
     top: 0.625rem;
   }
 }
+
+.button-link {
+  @include button-preset;
+  font-weight: 300;
+  text-decoration: underline;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+}

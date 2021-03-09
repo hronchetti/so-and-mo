@@ -1,0 +1,73 @@
+.rich-text {
+  ul {
+    margin-bottom: 1rem;
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      color: $grey-dark;
+      margin-bottom: 0.5rem;
+      display: table;
+
+      &:before {
+        content: "\2022";
+        display: table-cell;
+        padding-right: 0.5rem;
+      }
+
+      p {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  ol {
+    counter-reset: item;
+    margin-bottom: 1rem;
+
+    ol {
+      margin-bottom: 0;
+    }
+
+    li {
+      display: table;
+      margin-top: 0.5rem;
+
+      &:before {
+        content: counters(item, ".") ".";
+        counter-increment: item;
+        display: table-cell;
+        padding-right: 0.5rem;
+      }
+
+      p {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:focus {
+      text-decoration: none;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}

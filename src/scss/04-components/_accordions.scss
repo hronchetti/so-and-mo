@@ -1,0 +1,108 @@
+.accordion-group {
+  border: 1px solid $grey-light;
+  border-radius: 0.75rem;
+  padding: 0.25rem 0.5rem;
+
+  .accordion {
+    border-bottom: 1px solid $grey-light;
+    margin-bottom: 0.25rem;
+
+    &:last-of-type {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .accordion-header {
+      @include button-preset;
+      font: 500 0.875rem/1.25rem $font;
+      color: $grey-extra-dark;
+      position: relative;
+      padding: 0.625rem 1.5rem 0.625rem 2.875rem;
+      background-color: white;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 1.25rem;
+      display: block;
+      text-align: left;
+      margin-bottom: 0.25rem;
+
+      &.active {
+        background-color: $grey-extra-light;
+
+        &:before {
+          content: "\e908";
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: $grey-extra-light;
+        }
+      }
+
+      &:focus {
+        background-color: $grey-extra-light;
+      }
+
+      &:before {
+        position: absolute;
+        font-family: "icomoon";
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        display: block;
+        content: "\e909";
+        left: 0.75rem;
+        top: 0.625rem;
+        color: $green;
+      }
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 400ms ease-in;
+
+      .accordion-body-content {
+        padding: 0.25rem 1.5rem 1rem 2.875rem;
+
+        p {
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .accordion-group {
+    max-width: calculate-rem(784px);
+    margin: 0 auto;
+    padding: 0.5rem 1.25rem;
+    margin-top: 2.5rem;
+
+    .accordion {
+      margin-bottom: 0.5rem;
+
+      .accordion-header {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        padding: 0.625rem 2rem 0.625rem 3.125rem;
+        border-radius: 1.5rem;
+        margin-bottom: 0.5rem;
+
+        &:before {
+          font-size: 1.75rem;
+          line-height: 1.75rem;
+        }
+      }
+
+      .accordion-body {
+        .accordion-body-content {
+          padding: 0.5rem 2rem 1.25rem 3.125rem;
+        }
+      }
+    }
+  }
+}

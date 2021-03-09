@@ -6,8 +6,263 @@
   </head>
   <body>
     @@include('./components/nav/index.html')
-    <header class="background-green"></header>
-    <main></main>
+    <header class="product-header-wrapper">
+      <div class="product-header">
+        <div class="background-green product-header-images-wrapper">
+          <div class="product-header-images">
+            <div class="product-header-images-preview">
+              <img
+                class="active"
+                src="/temp/box-small.png"
+                alt="Performance Liquid Lawn Feed Box"
+              />
+              <img
+                src="/temp/bottles.png"
+                alt="Performance Liquid Lawn Feed Bottles"
+              />
+              <button
+                class="button-circle product-header-images-preview-button"
+              >
+                <span class="icon-chevron-left"></span>
+              </button>
+              <button
+                class="button-circle product-header-images-preview-button"
+              >
+                <span class="icon-chevron-right"></span>
+              </button>
+            </div>
+            <div class="product-header-images-thumbnails">
+              <button class="product-header-images-thumbnail active">
+                <img
+                  src="/temp/box-small.png"
+                  alt="Performance Liquid Lawn Feed Box"
+                />
+              </button>
+              <button class="product-header-images-thumbnail">
+                <img
+                  src="/temp/bottles.png"
+                  alt="Performance Liquid Lawn Feed Bottles"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-header-content">
+          <h1 class="heading-large">Performance liquid lawn feed</h1>
+          <!-- Reviews -->
+          <ul class="tick-bullet-group tick-bullet-group-green">
+            <!-- prettier-ignore -->
+            @@loop('./components/tick-bullet.html', [
+              {"text": "Liquid Lawn Feed for Lasting Results"}, 
+              {"text": "Only 6 Feeds Per Year (All in 1 Box)"}, 
+              {"text": "Results in Less Than 3 Days"} 
+            ])
+          </ul>
+          <div>
+            <label
+              >Your lawn size
+              <button
+                class="button-link"
+                onclick="showProductModal('lawn-measurement')"
+              >
+                Don’t know your lawn size?
+              </button></label
+            >
+            <div class="select-wrapper">
+              <select>
+                <option selected>0 - 125m&sup2; (2 Years)</option>
+                <option>125 - 250m&sup2; (1 Year)</option>
+              </select>
+            </div>
+            <div
+              class="modal"
+              id="lawn-measurement"
+              onclick="hideAllProductModals()"
+            >
+              <header class="modal-header">
+                <h3 class="heading-small">Measure your lawn</h3>
+                <button class="button-circle">
+                  <span class="icon-cross"></span>
+                </button>
+              </header>
+              <section class="modal-body rich-text"></section>
+            </div>
+          </div>
+          <div class="product-header-options">
+            <label class="product-header-option">
+              <div class="product-header-option-header"></div>
+              <input type="radio" name="variant" />
+              <div class="product-header-option-body">
+                <span class="product-header-option-price"
+                  ><span class="product-header-option-price-currency">£</span
+                  ><span class="product-header-option-price-value">45</span
+                  >/yr</span
+                >
+                <span class="product-header-option-name"
+                  >Just the lawn feed (you have a sprayer)</span
+                >
+              </div>
+            </label>
+            <label class="product-header-option">
+              <div class="product-header-option-header">
+                <span class="product-header-option-hint">Most popular</span>
+              </div>
+              <input type="radio" name="variant" checked />
+              <div
+                class="product-header-option-body product-header-option-body-hint"
+              >
+                <span class="product-header-option-price"
+                  ><span class="product-header-option-price-currency">£</span
+                  ><span class="product-header-option-price-value">57</span
+                  >/yr</span
+                >
+                <span class="product-header-option-name"
+                  >Lawn feed & Colour Indicator
+                </span>
+              </div>
+            </label>
+            <label class="product-header-option">
+              <div class="product-header-option-header"></div>
+              <input type="radio" name="variant" />
+              <div class="product-header-option-body">
+                <span class="product-header-option-price"
+                  ><span class="product-header-option-price-currency">£</span
+                  ><span class="product-header-option-price-value">97</span
+                  >/yr</span
+                >
+                <span class="product-header-option-name"
+                  >Lawn feed, sprayer & Colour Indicator</span
+                >
+              </div>
+            </label>
+          </div>
+          <span class="product-header-guidance">
+            You need a feed sprayer to use our products.
+            <button
+              class="button-link"
+              onclick="showProductModal('check-your-sprayer')"
+            >
+              Check your sprayer
+            </button>
+          </span>
+          <div
+            class="modal"
+            id="check-your-sprayer"
+            onclick="hideAllProductModals()"
+          >
+            <header class="modal-header">
+              <h3 class="heading-small">Check your sprayer</h3>
+              <button class="button-circle">
+                <span class="icon-cross"></span>
+              </button>
+            </header>
+            <section class="modal-body rich-text">
+              <p>
+                You’ll need a sprayer to use our Performance Liquid Lawn Feed,
+                but, if you’re no stranger to lawn feed you may have one
+                already.
+              </p>
+              <p>
+                <b>
+                  All standard backpack sprayers are suitable for So & Mo
+                  products.
+                </b>
+              </p>
+              <p>Backpack sprayer examples:</p>
+              <img src="/assets/liquid-lawn-feed-sprayers.jpg" />
+              <ul>
+                <li>Matabi Super Agro 16L Knapsack Sprayer</li>
+                <li>Matabi Kima 9L Compression Sprayer</li>
+                <li>15LPAPS 15LTR Backpack Style Sprayer</li>
+              </ul>
+              <p><b>Need a sprayer?</b></p>
+              <p>
+                Choose the ‘The Feed Box, sprayer & Colour Indicator’ (£194.99)
+                option to buy a feed sprayer with your performance lawn feed.
+              </p>
+              <p>
+                Or, you can purchase one of our sprayers seperately
+                <a href="/products-standard.html">here</a>.
+              </p>
+              <p><b>Unsure about something?</b></p>
+              <p>
+                We’re here to help. <a href="/contact-us.html">Contact us</a> if
+                you have any questions about lawn feed sprayers.
+              </p>
+            </section>
+          </div>
+          <a class="button-blue product-header-order-button" href="#"
+            >Order now</a
+          >
+          <ul class="product-header-facts">
+            <li class="product-header-fact">
+              <div class="product-header-fact-illustration">
+                @@include('./components/assets/recycle.html')
+              </div>
+              <span class="product-header-fact-text">Recyclable packaging</span>
+            </li>
+            <li class="product-header-fact">
+              <div class="product-header-fact-illustration">
+                @@include('./components/assets/fast.html')
+              </div>
+              <span class="product-header-fact-text"
+                >Free Next Day delivery</span
+              >
+            </li>
+            <li class="product-header-fact">
+              <div class="product-header-fact-illustration">
+                @@include('./components/assets/tree.html')
+              </div>
+              <span class="product-header-fact-text"
+                >10 trees planted every order</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      @@include('./components/bottle-viewer.html')
+      @@include('./components/bottle-nutrients.html')
+      <section class="background-white">
+        <section class="wrapper-width wrapper-height">
+          <h2 class="heading-medium divider-heading divider-heading-centered">
+            How to use
+          </h2>
+          <div class="divider divider-centered">
+            @@include('./components/assets/divider.html')
+          </div>
+          <div class="how-to-video">
+            <iframe
+              src="https://www.youtube.com/embed/sYsSVAfEnTk?controls=0"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Reviews Widget -->
+        </section>
+      </section>
+      <section class="background-white">
+        <section class="wrapper-width wrapper-height-bottom-only">
+          <h2 class="heading-medium divider-heading divider-heading-centered">
+            Frequently asked questions
+          </h2>
+          <div class="divider divider-centered">
+            @@include('./components/assets/divider.html')
+          </div>
+          <section class="accordion-group">
+            @@include('./components/faqs.html')
+          </section>
+        </section>
+      </section>
+      @@include('./components/sections/sustainability.html')
+    </main>
+    <div
+      class="overlay"
+      id="modal-overlay"
+      onclick="hideAllProductModals()"
+    ></div>
     @@include('./components/footer/index.html')
     <!-- Scripts -->
     <script src="js/index.min.js"></script>

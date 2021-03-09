@@ -1,6 +1,18 @@
 .tick-bullet-group {
   padding: 1rem 0;
 
+  &.tick-bullet-group-green {
+    .tick-bullet {
+      &:before {
+        background-color: $green;
+      }
+
+      .tick-bullet-text {
+        color: black;
+      }
+    }
+  }
+
   .tick-bullet {
     position: relative;
     padding: 0 0 0.5rem 1.625rem;
