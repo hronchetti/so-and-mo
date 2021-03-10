@@ -6,8 +6,108 @@
   </head>
   <body>
     @@include('./components/nav/index.html')
-    <header class="background-green"></header>
-    <main></main>
+    <header class="wrapper-width header">
+      <h1 class="heading-large divider-heading divider-heading-centered">
+        Contact us
+      </h1>
+      <div class="divider divider-centered">
+        @@include('./components/assets/divider.html')
+      </div>
+    </header>
+    <main class="wrapper-width wrapper-height-bottom-only info-page">
+      <div class="rich-text">
+        <h2 class="heading-small">Here to help</h2>
+        <p>
+          Hi there! We have just launched our new website, so please bear with
+          us if you're experiencing any problems.
+        </p>
+        <p>
+          If you have any questions, the quickest way to contact us is on live
+          chat (At the bottom right of your screen).
+        </p>
+        <p>
+          Not a fan of live chat? Drop us an email us at
+          <a href="mailto:team@soandmo.com" target="_blank" rel="noopener"
+            >team@soandmo.com</a
+          >
+          or by using the form on this page.
+        </p>
+        <div class="social-icons">
+          <h3 class="bold-text">Follow us</h3>
+          <ul class="social-icons-list">
+            <li class="social-icons-list-icon">
+              <a
+                href="https://www.facebook.com/Soandmolawns"
+                target="_blank"
+                rel="noopener"
+                class="icon-facebook"
+              ></a>
+            </li>
+            <li class="social-icons-list-icon">
+              <a
+                href="https://www.instagram.com/soandmolawns/"
+                target="_blank"
+                rel="noopener"
+                class="icon-instagram"
+              ></a>
+            </li>
+            <li class="social-icons-list-icon">
+              <a
+                href="https://www.instagram.com/soandmolawns/"
+                target="_blank"
+                rel="noopener"
+                class="icon-youtube"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form">
+          <div>
+            <label for="name">Name</label>
+            <input class="error" type="text" name="name" id="name" />
+            <span class="form-error">Error text example</span>
+          </div>
+          <div>
+            <label for="email">Email address</label>
+            <input type="text" name="email" id="email" />
+            <span class="form-error"></span>
+          </div>
+          <div>
+            <label for="phone"
+              >Phone number<span class="label-guidance">Optional</span></label
+            >
+            <input type="text" name="phone" id="phone" />
+            <span class="form-error"></span>
+          </div>
+          <div>
+            <label for="order"
+              >Order number<span class="label-guidance">Optional</span></label
+            >
+            <input type="text" name="order" id="order" />
+            <span class="form-error"></span>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              rows="4"
+            ></textarea>
+            <span class="form-error"></span>
+          </div>
+          <button class="button-blue button-submit">Send email</button>
+        </form>
+        <p class="contact-form-help">
+          We aim to reply to all customer service enquiries within 1 working
+          day. Need an answer now? Tap the Live Chat button at the bottom right
+          of your screen.
+        </p>
+      </div>
+    </main>
+    @@include('./components/sections/product-guarantee.html')
     @@include('./components/footer/index.html')
     <!-- Scripts -->
     <script src="js/index.min.js"></script>

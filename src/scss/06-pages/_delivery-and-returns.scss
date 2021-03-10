@@ -1,0 +1,37 @@
+.ecologi {
+  display: block;
+  text-decoration: none;
+  border: 1px solid $grey-light;
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem 0.5rem;
+  margin-top: 1rem;
+
+  .ecologi-heading {
+    display: block;
+    font: 500 0.875rem/1.25rem $font;
+    color: $grey-extra-dark;
+    margin-bottom: 0.5rem;
+  }
+
+  .ecologi-logo {
+    width: 6rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .ecologi {
+    margin-top: 1.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    .ecologi-heading {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .ecologi-logo {
+      width: 7rem;
+    }
+  }
+}

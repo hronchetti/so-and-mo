@@ -3,12 +3,19 @@ label {
   font: 500 0.875rem/1.25rem $font;
   margin-bottom: 0.5rem;
   color: $grey-dark;
+  @include flex-space-between;
+
+  .label-guidance {
+    color: #aaaaaa;
+    font-weight: 300;
+  }
 }
 
 input[type="text"],
 input[type="email"],
 input[type="number"],
-select {
+select,
+textarea {
   border: 1px solid $grey-light;
   display: block;
   border-radius: 0.75rem;
@@ -18,6 +25,11 @@ select {
   padding: 0.625rem 1.125rem;
   width: 100%;
   appearance: none;
+  resize: none;
+
+  &.error {
+    border-color: #cc495f;
+  }
 
   &:focus {
     outline: none;

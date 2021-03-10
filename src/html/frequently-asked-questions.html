@@ -6,8 +6,38 @@
   </head>
   <body>
     @@include('./components/nav/index.html')
-    <header class="background-green"></header>
-    <main></main>
+    <header class="wrapper-width header">
+      <h1 class="heading-large divider-heading divider-heading-centered">
+        Frequently asked questions
+      </h1>
+      <div class="divider divider-centered">
+        @@include('./components/assets/divider.html')
+      </div>
+    </header>
+    <main class="wrapper-width wrapper-height-bottom-only faqs">
+      <section class="accordion-group">
+        @@include('./components/faqs.html')
+      </section>
+      <aside class="sidebar">
+        <div class="sidebar-box background-grey-extra-light">
+          <h2 class="heading-small">Ready to be proud of your garden?</h2>
+          <p>
+            Transform your lawn in under 3 days with The Feed Box lawn feed.
+          </p>
+          <a
+            href="/products-performance-liquid-lawn-feed.html"
+            class="button-blue"
+            >Shop now</a
+          >
+        </div>
+        <div class="sidebar-box sidebar-box-grey-light-border">
+          <h2 class="heading-small">Can’t find what you’re looking for?</h2>
+          <a href="/contact-us.html" class="button-white button-white-border"
+            >Contact us</a
+          >
+        </div>
+      </aside>
+    </main>
     @@include('./components/footer/index.html')
     <!-- Scripts -->
     <script src="js/index.min.js"></script>

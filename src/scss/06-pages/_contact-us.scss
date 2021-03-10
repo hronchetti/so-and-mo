@@ -1,0 +1,80 @@
+.social-icons {
+  .bold-text {
+    margin-bottom: 0;
+  }
+
+  .social-icons-list {
+    margin: 0;
+    @include flex-justify-start;
+
+    .social-icons-list-icon {
+      list-style-type: none;
+
+      &:before {
+        display: none;
+      }
+
+      a {
+        color: $blue-dark;
+        display: block;
+        font-size: 1.5rem;
+        padding: 0.5rem 0.75rem 0.5rem 0;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.contact-form {
+  background-color: $grey-extra-light;
+  border-radius: 0.75rem;
+  border: 1px solid $grey-light;
+  padding: 1rem 1.25rem;
+
+  .form-error {
+    font: 300 0.75rem/1rem $font;
+    color: #a11b32;
+  }
+
+  .button-submit {
+    margin-top: 0.25rem;
+  }
+}
+
+.contact-form-help {
+  margin: 1rem 0 0 0;
+}
+
+@media only screen and (min-width: 900px) {
+  .contact-form {
+    padding: 1.5rem 2rem;
+
+    .form-error {
+      min-height: 1.5rem;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .contact-form-help {
+    margin-top: 1.5rem;
+  }
+
+  .social-icons {
+    margin-top: 2rem;
+
+    .bold-text {
+      margin-bottom: 1rem;
+    }
+
+    .social-icons-list {
+      .social-icons-list-icon {
+        a {
+          font-size: 1.75rem;
+          padding: 0;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

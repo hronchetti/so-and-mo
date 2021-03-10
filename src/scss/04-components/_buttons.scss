@@ -31,6 +31,16 @@
   &.button-white-border {
     border: 1px solid $grey-light;
   }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $grey-light;
+    }
+  }
+
+  &:focus {
+    background-color: $grey-light;
+  }
 }
 
 .button-green {
