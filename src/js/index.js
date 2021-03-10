@@ -54,7 +54,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Products -- Images Preview
 
-const a = () => {}
+const updateCarouselToTile = (slideNumber) => {
+  // Get all images and thumbnails
+  const thumbnails = document.getElementsByClassName(
+    "product-header-images-thumbnail"
+  )
+  const tiles = document.getElementsByClassName(
+    "product-header-images-preview-tile"
+  )
+
+  if (thumbnails.length === tiles.length) {
+    // Reseting all thumbnails
+    for (let i = 0; i < thumbnails.length; i++) {
+      const element = thumbnails[i]
+      element.classList.remove("active")
+    }
+    // Reseting all tiles
+    for (let i = 0; i < tiles.length; i++) {
+      const element = tiles[i]
+      element.classList.remove("active")
+    }
+    // Finding new thumbnail to activate
+    const newActiveThumbnail = document.getElementById(
+      "product-header-images-thumbnail-" + slideNumber.toString()
+    )
+    // Finding new tile to activate
+    const newActiveTile = document.getElementById(
+      "product-header-images-preview-tile-" + slideNumber.toString()
+    )
+    // Activating new tile and thumbnail
+    if (newActiveThumbnail && newActiveTile) {
+      newActiveThumbnail.classList.add("active")
+      newActiveTile.classList.add("active")
+    } else {
+      console.log("Could not find tile or thumbnail to activate")
+    }
+  } else {
+    console.log("Number or tiles and thumbnails do not match")
+  }
+}
+
+const updateCarouselTiles = (direction) => {
+  let currentTile = 0
+  let newTile = 0
+  // Get all tiles
+  const tiles = document.getElementsByClassName(
+    "product-header-images-preview-tile"
+  )
+  // Find current tile by locating 'active' class
+  for (let i = 0; i < tiles.length; i++) {
+    if (tiles[i].classList.contains("active")) {
+      const currentTileId = tiles[i].id
+      currentTile = parseInt(
+        currentTileId.slice(currentTileId.length - 1, currentTileId.length)
+      )
+    }
+  }
+
+  if (direction === "previous") {
+    newTile = currentTile - 1
+    if (newTile < 1) {
+      newTile = tiles.length
+    }
+  } else if (direction === "next") {
+    newTile = currentTile + 1
+    if (newTile > tiles.length) {
+      newTile = 1
+    }
+  }
+
+  updateCarouselToTile(newTile)
+}
 
 // Products -- Lawn Feed -- Modals
 

@@ -12,33 +12,62 @@
           <div class="product-header-images">
             <div class="product-header-images-preview">
               <img
-                class="active"
+                class="product-header-images-preview-tile active"
+                id="product-header-images-preview-tile-1"
                 src="/temp/box-small.png"
                 alt="Performance Liquid Lawn Feed Box"
               />
               <img
+                class="product-header-images-preview-tile"
+                id="product-header-images-preview-tile-2"
+                src="/temp/bottles.png"
+                alt="Performance Liquid Lawn Feed Bottles"
+              />
+              <img
+                class="product-header-images-preview-tile"
+                id="product-header-images-preview-tile-3"
                 src="/temp/bottles.png"
                 alt="Performance Liquid Lawn Feed Bottles"
               />
               <button
                 class="button-circle product-header-images-preview-button"
+                onclick="updateCarouselTiles('previous')"
               >
                 <span class="icon-chevron-left"></span>
               </button>
               <button
                 class="button-circle product-header-images-preview-button"
+                onclick="updateCarouselTiles('next')"
               >
                 <span class="icon-chevron-right"></span>
               </button>
             </div>
             <div class="product-header-images-thumbnails">
-              <button class="product-header-images-thumbnail active">
+              <button
+                class="product-header-images-thumbnail active"
+                id="product-header-images-thumbnail-1"
+                onclick="updateCarouselToTile(1)"
+              >
                 <img
                   src="/temp/box-small.png"
                   alt="Performance Liquid Lawn Feed Box"
                 />
               </button>
-              <button class="product-header-images-thumbnail">
+              <button
+                class="product-header-images-thumbnail"
+                id="product-header-images-thumbnail-2"
+                onclick="updateCarouselToTile(2)"
+              >
+                <img
+                  src="/temp/bottles.png"
+                  alt="Performance Liquid Lawn Feed Bottles"
+                />
+              </button>
+              <button
+                class="product-header-images-thumbnail"
+                id="product-header-images-thumbnail-3"
+                onclick="updateCarouselToTile(3)"
+              >
                 <img
                   src="/temp/bottles.png"
                   alt="Performance Liquid Lawn Feed Bottles"
