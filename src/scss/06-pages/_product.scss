@@ -15,7 +15,8 @@
         position: relative;
 
         .product-header-images-preview-tile {
-          width: calc(100% - 8rem);
+          max-width: calc(100% - 8rem);
+          max-height: 100%;
           opacity: 0;
           position: absolute;
           left: 50%;
@@ -25,7 +26,7 @@
 
           &.active {
             opacity: 1;
-            transition: opacity 300ms ease-in;
+            transition: opacity 500ms ease-in;
           }
         }
 
@@ -75,6 +76,14 @@
 
   .product-header-content {
     padding: 1rem 1.25rem 0;
+
+    .product-header-content-tick-bullet-group-standard-product {
+      padding-bottom: 0.5rem;
+    }
+
+    .product-header-content-plain-text {
+      padding-bottom: 0.5rem;
+    }
 
     .select-wrapper {
       max-width: 284px;
@@ -247,7 +256,7 @@
           margin: 0 auto;
 
           .product-header-images-preview-tile {
-            width: calc(100% - 10rem);
+            max-width: calc(100% - 10rem);
           }
         }
       }
@@ -337,7 +346,7 @@
           width: 100%;
 
           .product-header-images-preview-tile {
-            width: calc(100% - 15rem);
+            max-width: calc(100% - 15rem);
           }
 
           .product-header-images-preview-button {
@@ -367,6 +376,14 @@
 
     .product-header-content {
       padding: 1.5rem 3rem;
+
+      .product-header-content-tick-bullet-group-standard-product {
+        padding-bottom: 0.75rem;
+      }
+
+      .product-header-content-plain-text {
+        padding-bottom: 0.25rem;
+      }
 
       .product-header-options {
         margin-top: 1.25rem;
