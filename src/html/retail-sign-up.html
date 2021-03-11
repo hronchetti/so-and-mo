@@ -6,8 +6,48 @@
   </head>
   <body>
     @@include('./components/nav/index.html')
-    <header class="background-green"></header>
-    <main></main>
+    <header class="header retail-sign-up">
+      <h1 class="heading-large">Don’t forget to feed</h1>
+      <p>Get email reminders for your So & Mo lawn feed spray.</p>
+      <button class="button-green">Sign up</button>
+      <div class="bottle-squad">
+        <div class="wrapper-width bottle-squad-bottles">
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/01-feb-bottle.png"
+            alt="February Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/02-apr-bottle.png"
+            alt="April Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/03-jun-bottle.png"
+            alt="June Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/04-aug-bottle.png"
+            alt="August Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/05-oct-bottle.png"
+            alt="October Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/06-dec-bottle.png"
+            alt="December Liquid Lawn Feed Bottle"
+          />
+        </div>
+        <div class="bottle-squad-grass">
+          @@include('./components/assets/grass-row-blue-dark.html')
+        </div>
+      </div>
+    </header>
     @@include('./components/footer/index.html')
     <!-- Scripts -->
     <script src="js/index.min.js"></script>

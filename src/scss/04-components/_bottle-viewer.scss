@@ -1,8 +1,8 @@
-.bottle-viewer-header {
+.bottle-squad {
   position: relative;
   margin-bottom: 0.75rem;
 
-  .bottle-viewer-header-bottles {
+  .bottle-squad-bottles {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0.75rem;
@@ -10,7 +10,7 @@
     margin: 0 auto;
   }
 
-  .bottle-viewer-header-grass {
+  .bottle-squad-grass {
     overflow: hidden;
     width: 100%;
     height: 0.625rem;
@@ -142,15 +142,15 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .bottle-viewer-header {
+  .bottle-squad {
     margin-bottom: 1.5rem;
 
-    .bottle-viewer-header-bottles {
+    .bottle-squad-bottles {
       max-width: 40rem;
       gap: 1.5rem;
     }
 
-    .bottle-viewer-header-grass {
+    .bottle-squad-grass {
       height: 0.875rem;
       bottom: 0.875rem;
 
@@ -247,15 +247,15 @@
 }
 
 @media only screen and (min-width: 1100px) {
-  .bottle-viewer-header {
+  .bottle-squad {
     margin-bottom: 3rem;
 
-    .bottle-viewer-header-bottles {
+    .bottle-squad-bottles {
       max-width: 60rem;
       gap: 2rem;
     }
 
-    .bottle-viewer-header-grass {
+    .bottle-squad-grass {
       height: 1.125rem;
       bottom: 1.125rem;
 

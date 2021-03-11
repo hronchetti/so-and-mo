@@ -3,7 +3,10 @@ label {
   font: 500 0.875rem/1.25rem $font;
   margin-bottom: 0.5rem;
   color: $grey-dark;
-  @include flex-space-between;
+
+  &.label-flex {
+    @include flex-space-between;
+  }
 
   .label-guidance {
     color: #aaaaaa;
@@ -28,7 +31,7 @@ textarea {
   resize: none;
 
   &.error {
-    border-color: #cc495f;
+    border-color: #d94e65;
   }
 
   &:focus {
