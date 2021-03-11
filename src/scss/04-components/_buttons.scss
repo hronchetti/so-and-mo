@@ -47,6 +47,16 @@
   @extend %button;
   background-color: $green;
   color: $blue-dark;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #a7cc5a;
+    }
+  }
+
+  &:focus {
+    background-color: #a7cc5a;
+  }
 }
 
 .button-circle {

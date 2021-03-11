@@ -6,10 +6,93 @@
   </head>
   <body>
     @@include('./components/nav/index.html')
-    <header class="background-green"></header>
-    <main></main>
+    <header class="wrapper-width header">
+      <h1 class="heading-large divider-heading divider-heading-centered">
+        Our story
+      </h1>
+      <div class="divider divider-centered">
+        @@include('./components/assets/divider.html')
+      </div>
+    </header>
+    <main class="wrapper-width wrapper-height-bottom-only">
+      <div class="our-story">
+        <div class="our-story-progress">
+          <span class="our-story-progress-bar"></span>
+        </div>
+        <div class="our-story-content">
+          <section class="our-story-content-section active">
+            <div>
+              <h2 class="heading-medium our-story-content-section-heading">
+                Why we started
+              </h2>
+            </div>
+            <div class="rich-text">
+              <p>
+                In our experience, we found that domestic lawn care products in
+                general are made to be complex, give disappointing results and
+                force customers into a decision they’re not trained for.
+              </p>
+              <p>
+                We recognised the desire for a bright and healthy lawn was
+                outweighed by the chore that came with achieving it.
+              </p>
+              <p><b> So we decided to do something about it.</b></p>
+              <img
+                src="/assets/so-and-mo-performance-lawn-feed.jpg"
+                alt="Liquid Lawn Feed"
+              />
+            </div>
+          </section>
+          <section class="our-story-content-section">
+            <div>
+              <h2 class="heading-medium our-story-content-section-heading">
+                How it’s going
+              </h2>
+            </div>
+            <div class="rich-text">
+              <p>
+                In our experience, we found that domestic lawn care products in
+                general are made to be complex, give disappointing results and
+                force customers into a decision they’re not trained for.
+              </p>
+              <p>
+                We recognised the desire for a bright and healthy lawn was
+                outweighed by the chore that came with achieving it.
+              </p>
+              <p><b> So we decided to do something about it.</b></p>
+            </div>
+          </section>
+          <section class="our-story-content-section">
+            <div>
+              <h2 class="heading-medium our-story-content-section-heading">
+                The future
+              </h2>
+            </div>
+            <div class="rich-text">
+              <p>
+                In our experience, we found that domestic lawn care products in
+                general are made to be complex, give disappointing results and
+                force customers into a decision they’re not trained for.
+              </p>
+              <p>
+                We recognised the desire for a bright and healthy lawn was
+                outweighed by the chore that came with achieving it.
+              </p>
+              <p><b> So we decided to do something about it.</b></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    @@include('./components/sections/sustainability.html')
+    @@include('./components/sections/product-guarantee.html')
     @@include('./components/footer/index.html')
     <!-- Scripts -->
     <script src="js/index.min.js"></script>
+    <script>
+      const updateScrollProgress = () => {}
+
+      window.addEventListener("scroll", updateScrollProgress)
+    </script>
   </body>
 </html>

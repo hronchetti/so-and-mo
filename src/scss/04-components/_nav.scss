@@ -1,8 +1,9 @@
 .nav {
   width: 100%;
-  position: sticky;
+  position: fixed;
   border-bottom: 1px solid $grey-light;
   top: 0;
+  left: 0;
   background-color: white;
   z-index: 1000;
 
@@ -36,6 +37,10 @@
   }
 }
 
+.shadow-nav {
+  height: calculate-rem(73px);
+}
+
 @media only screen and (min-width: 600px) {
   .nav {
     .nav-layout {
@@ -45,6 +50,10 @@
         width: 9rem;
       }
     }
+  }
+
+  .shadow-nav {
+    height: calculate-rem(81px);
   }
 }
 
@@ -213,6 +222,10 @@
       }
     }
   }
+
+  .shadow-nav {
+    height: calculate-rem(93px);
+  }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -233,6 +246,10 @@
         }
       }
     }
+  }
+
+  .shadow-nav {
+    height: calculate-rem(97px);
   }
 }
 
