@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('./components/head.html')
+    <title>Sign Up</title>
+  </head>
+  <body>
+    @@include('./components/nav/index.html')
+    <header class="header">
+      <section class="wrapper-width">
+        <h1 class="heading-large divider-heading divider-heading-centered">
+          How to use our feed
+        </h1>
+        <div class="divider divider-centered">
+          @@include('./components/assets/divider.html')
+        </div>
+        <div class="how-to-video how-to-video-page">
+          <iframe
+            src="https://www.youtube.com/embed/sYsSVAfEnTk"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <div class="bottle-squad">
+        <div class="wrapper-width bottle-squad-bottles">
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/01-feb-bottle.png"
+            alt="February Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/02-apr-bottle.png"
+            alt="April Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/03-jun-bottle.png"
+            alt="June Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/04-aug-bottle.png"
+            alt="August Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/05-oct-bottle.png"
+            alt="October Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/06-dec-bottle.png"
+            alt="December Liquid Lawn Feed Bottle"
+          />
+        </div>
+        <div class="bottle-squad-grass">
+          @@include('./components/assets/grass-row-blue-dark.html')
+        </div>
+      </div>
+    </header>
+    @@include('./components/footer/index.html')
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

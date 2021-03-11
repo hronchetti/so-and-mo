@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('./components/head.html')
+    <title>Your basket</title>
+  </head>
+  <body>
+    @@include('./components/nav/index.html')
+    <section class="wrapper-width basket-page">
+      <header class="basket-page-header">
+        <h1 class="heading-large">Your basket</h1>
+        <button class="button-link">Empty</button>
+      </header>
+      <main>
+        <div class="basket-page-items">
+          <div class="basket-page-item">
+            <div>
+              <div class="basket-page-item-image">
+                <img
+                  src="/temp/box-small.png"
+                  alt="Item name"
+                  title="Item name"
+                />
+              </div>
+            </div>
+            <div>
+              <span class="basket-page-item-name"
+                >Lawn Feed & Colour Indicator</span
+              >
+              <span class="basket-page-item-detail">Quantity: 1</span>
+              <button class="button-link basket-page-item-button">
+                Remove
+              </button>
+            </div>
+            <div class="text-right">£114.00</div>
+          </div>
+        </div>
+        <ul class="basket-page-facts">
+          <li class="basket-page-fact">
+            <div class="basket-page-fact-illustration">
+              @@include('./components/assets/recycle.html')
+            </div>
+            <span class="basket-page-fact-text">Recyclable packaging</span>
+          </li>
+          <li class="basket-page-fact">
+            <div class="basket-page-fact-illustration">
+              @@include('./components/assets/fast.html')
+            </div>
+            <span class="basket-page-fact-text">Free Next Day delivery</span>
+          </li>
+          <li class="basket-page-fact">
+            <div class="basket-page-fact-illustration">
+              @@include('./components/assets/tree.html')
+            </div>
+            <span class="basket-page-fact-text"
+              >10 trees planted every order</span
+            >
+          </li>
+        </ul>
+      </main>
+      <aside class="basket-drawer-footer basket-page-checkout">
+        <ul class="transaction-rows">
+          <li class="transaction-row">
+            <span class="transaction-row-left">Subtotal</span>
+            <span class="transaction-row-right">£259.99</span>
+          </li>
+          <li class="transaction-row">
+            <span class="transaction-row-left">Delivery</span>
+            <span class="transaction-row-right">Free</span>
+          </li>
+        </ul>
+        <ul class="transaction-rows">
+          <li class="transaction-row">
+            <span class="transaction-row-left">Total</span>
+            <span class="transaction-row-right">£259.99</span>
+          </li>
+        </ul>
+        <div class="checkout">
+          <a href="#" class="button-blue">Checkout</a>
+          <span class="checkout-note">Discount codes applied at checkout</span>
+          <div class="checkout-payment-options">
+            <!-- ACTIVE PATYMENT OPTION ICONS -->
+            <div class="checkout-payment-options-card">
+              @@include('./components/nav/example-payment-option.html')
+            </div>
+            <div class="checkout-payment-options-card">
+              @@include('./components/nav/example-payment-option.html')
+            </div>
+            <div class="checkout-payment-options-card">
+              @@include('./components/nav/example-payment-option.html')
+            </div>
+            <div class="checkout-payment-options-card">
+              @@include('./components/nav/example-payment-option.html')
+            </div>
+            <div class="checkout-payment-options-card">
+              @@include('./components/nav/example-payment-option.html')
+            </div>
+            <div class="checkout-payment-options-card">
+              @@include('./components/nav/example-payment-option.html')
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

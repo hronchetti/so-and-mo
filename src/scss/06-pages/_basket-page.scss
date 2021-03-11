@@ -1,0 +1,121 @@
+.basket-page {
+  padding-top: 1rem;
+
+  .basket-page-header {
+    @include flex-space-between;
+    align-items: center;
+    border-bottom: 1px solid $grey-extra-light;
+    padding-bottom: 0.5rem;
+
+    .button-link {
+      color: $grey-dark;
+    }
+  }
+
+  .basket-page-items {
+    .basket-page-item {
+      display: grid;
+      grid-template-columns: 4rem 1fr 3.5rem;
+      gap: 0 1rem;
+      font: 300 0.875rem/1.25rem $font;
+      color: $grey-dark;
+      padding: 1rem 0 0.5rem;
+      border-bottom: 1px solid $grey-light;
+
+      .basket-page-item-image {
+        background-color: $green;
+        width: 100%;
+        padding: 0.125rem 0.25rem;
+      }
+
+      .basket-page-item-name {
+        display: block;
+        font: 500 1rem/1.25rem $font;
+        color: $grey-extra-dark;
+        margin-bottom: 0.5rem;
+      }
+
+      .basket-page-item-detail {
+        display: block;
+        margin: 0.25rem 0;
+      }
+
+      .basket-page-item-button {
+        padding: 0.25rem 0.25rem 0.5rem 0;
+      }
+    }
+  }
+
+  .basket-page-facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+
+    .basket-page-fact {
+      text-align: center;
+
+      .basket-page-fact-illustration {
+        svg {
+          margin: 0 auto;
+          height: 1.25rem;
+
+          path {
+            &:last-of-type {
+              fill: $grey-dark;
+            }
+          }
+        }
+      }
+
+      .basket-page-fact-text {
+        margin-top: 0.625rem;
+        display: block;
+        font: 600 0.75rem/1rem $font-secondary;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .basket-page-checkout {
+    padding: 0.875rem 1.25rem;
+    border-radius: 0.75rem;
+    margin-top: 1.5rem;
+    border: 1px solid $grey-light;
+
+    .transaction-rows {
+      &:first-of-type {
+        padding: 0;
+        border-bottom: 1px solid $grey-light;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .basket-page {
+    display: grid;
+    grid-template-columns: 1fr 25rem;
+    gap: 0 5rem;
+
+    .basket-page-checkout {
+      margin-top: 0;
+      grid-row: 1/3;
+      grid-column: 2/3;
+      padding: 1.5rem 2rem 1.75rem;
+
+      .transaction-rows {
+        padding: 2rem 0 0 0;
+
+        &:first-of-type {
+          padding: 0 0 1rem 0;
+        }
+      }
+
+      .checkout {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
