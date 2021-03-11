@@ -177,12 +177,26 @@ const viewMonth = (monthButton, month) => {
 // Producst -- Lawn Feed -- Nutrients
 
 const toggleNutrient = (nutrientButton) => {
-  nutrientButton.classList.toggle("active")
-  const nutrientBody = nutrientButton.nextElementSibling
+  const wasActive = nutrientButton.classList.contains("active")
 
-  if (nutrientBody.style.maxHeight) {
-    nutrientBody.style.maxHeight = null
-  } else {
+  const allNutrientButtons = document.getElementsByClassName("nutrient-button")
+
+  Array.from(allNutrientButtons).forEach((currentNutrientButton) => {
+    currentNutrientButton.classList.remove("active")
+  })
+
+  if (window.innerWidth < 600) {
+    const allNutrientBodys = document.getElementsByClassName("nutrient-body")
+
+    Array.from(allNutrientBodys).forEach((currentNutrientBody) => {
+      currentNutrientBody.style.maxHeight = null
+    })
+  }
+  //
+
+  if (!wasActive) {
+    nutrientButton.classList.add("active")
+    const nutrientBody = nutrientButton.nextElementSibling
     nutrientBody.style.maxHeight = nutrientBody.scrollHeight + "px"
   }
 }
@@ -190,25 +204,42 @@ const toggleNutrient = (nutrientButton) => {
 // Accordions
 
 const toggleAccordion = (accordionButton) => {
-  // // Closed state for all accordion-header
-  // const allAccordionButtons = document.getElementsByClassName(
-  //   "accordion-header"
-  // )
-  // Array.from(allAccordionButtons).forEach((currentAccordionButton) => {
-  //   currentAccordionButton.classList.remove("active")
-  // })
-  // // Closed state for all accordion-body
-  // const allAccordionBody = document.getElementsByClassName("accordion-body")
-  // Array.from(allAccordionBody).forEach((currentAccordionBody) => {
-  //   currentAccordionBody.style.maxHeight = null
-  // })
-  // Open clicked accordion
-  accordionButton.classList.toggle("active")
-  const accordionBody = accordionButton.nextElementSibling
+  const wasActive = accordionButton.classList.contains("active")
+  // Closed state for all accordion-header
+  const allAccordionButtons = document.getElementsByClassName(
+    "accordion-header"
+  )
+  Array.from(allAccordionButtons).forEach((currentAccordionButton) => {
+    currentAccordionButton.classList.remove("active")
+  })
+  // Closed state for all accordion-body
+  const allAccordionBody = document.getElementsByClassName("accordion-body")
+  Array.from(allAccordionBody).forEach((currentAccordionBody) => {
+    currentAccordionBody.style.maxHeight = null
+  })
 
-  if (accordionBody.style.maxHeight) {
-    accordionBody.style.maxHeight = null
-  } else {
+  // Open clicked accordion
+
+  if (!wasActive) {
+    accordionButton.classList.add("active")
+    const accordionBody = accordionButton.nextElementSibling
     accordionBody.style.maxHeight = accordionBody.scrollHeight + "px"
+  }
+}
+
+// Retail Sign Up Form
+const toggleFormState = (event, newState) => {
+  event.preventDefault()
+  const initialState = document.getElementById("retail-sign-up-initial")
+  const completedState = document.getElementById("retail-sign-up-completed")
+
+  if (newState === "subscribe") {
+    initialState.classList.remove("active")
+    completedState.classList.add("active")
+  } else if (newState === "unsubscribe") {
+    initialState.classList.add("active")
+    completedState.classList.remove("active")
+  } else {
+    console.log("Form state not specified")
   }
 }

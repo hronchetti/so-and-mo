@@ -7,9 +7,43 @@
   <body>
     @@include('./components/nav/index.html')
     <header class="header retail-sign-up">
-      <h1 class="heading-large">Don’t forget to feed</h1>
-      <p>Get email reminders for your So & Mo lawn feed spray.</p>
-      <button class="button-green">Sign up</button>
+      <section class="retail-sign-up-completed-wrapper">
+        <section id="retail-sign-up-completed">
+          <div class="retail-sign-up-form-completed-tick">
+            <span class="icon-tick"></span>
+          </div>
+          <h2 class="heading-large">You’re signed up</h2>
+          <div class="retail-sign-up-form">
+            <p>
+              You’ll now recieve email reminders about when to take your So & Mo
+              feed.
+            </p>
+            <button
+              class="button-green retail-sign-up-unsubscribe-button"
+              type="submit"
+              onclick="toggleFormState(event, 'unsubscribe')"
+            >
+              Unsubscribe
+            </button>
+          </div>
+        </section>
+      </section>
+      <section class="wrapper-width active" id="retail-sign-up-initial">
+        <h1 class="heading-large">Don’t forget to feed</h1>
+        <form class="retail-sign-up-form">
+          <p>Get email reminders for your So & Mo lawn feed spray.</p>
+          <input type="text" name="name" id="name" placeholder="Your email" />
+          <span class="form-error"></span>
+          <button
+            type="submit"
+            class="button-green"
+            onclick="toggleFormState(event, 'subscribe')"
+          >
+            Sign up
+          </button>
+        </form>
+      </section>
+
       <div class="bottle-squad">
         <div class="wrapper-width bottle-squad-bottles">
           <img

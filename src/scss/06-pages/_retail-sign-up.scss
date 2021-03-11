@@ -1,2 +1,124 @@
 .retail-sign-up {
+  .retail-sign-up-completed-wrapper {
+    position: relative;
+
+    #retail-sign-up-completed {
+      position: absolute;
+      top: 0;
+      width: calc(100% - 2.5rem);
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+      opacity: 0;
+
+      &.active {
+        pointer-events: all;
+        opacity: 1;
+      }
+
+      .retail-sign-up-form-completed-tick {
+        position: relative;
+        padding: 0 0 0.5rem 1.625rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-bottom: 0.75rem;
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0.25rem;
+          left: 0;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: $green;
+          border-radius: 50%;
+        }
+
+        .icon-tick {
+          display: block;
+          color: $blue-dark;
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+          position: absolute;
+          left: 0.25rem;
+          top: calculate-rem(1px);
+        }
+      }
+    }
+  }
+
+  #retail-sign-up-initial {
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  .retail-sign-up-form {
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+
+    p {
+      margin: 0.5rem 0 1rem 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .retail-sign-up {
+    text-align: center;
+
+    .retail-sign-up-completed-wrapper {
+      #retail-sign-up-completed {
+        width: calc(100% - 4rem);
+
+        .retail-sign-up-form-completed-tick {
+          width: 2rem;
+          height: 2rem;
+          margin: 0 auto 1.25rem auto;
+
+          &:before {
+            width: 1.75rem;
+            height: 1.75rem;
+          }
+
+          .icon-tick {
+            font-size: 1.75rem;
+            line-height: 1.75rem;
+          }
+        }
+      }
+    }
+    .retail-sign-up-form {
+      max-width: 20rem;
+      padding-bottom: 3rem;
+
+      .button-green {
+        width: 100%;
+        display: block;
+
+        &.retail-sign-up-unsubscribe-button {
+          display: inline-block;
+          width: auto;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .retail-sign-up {
+    .retail-sign-up-form {
+      padding-bottom: 4rem;
+
+      p {
+        margin: 1rem 0 1.25rem 0;
+      }
+    }
+  }
 }
