@@ -22,20 +22,34 @@ const hideAllNavPanels = () => {
 
 // Navigation -- Desktop Dropdown
 
-const toggleNavDropdownDesktop = () => {
-  document.getElementById("nav-dropdown-desktop").classList.toggle("active")
+const toggleNavDropdownDesktop = (dropdown) => {
+  document.getElementById(dropdown).classList.toggle("active")
 }
 
 document.addEventListener("click", (event) => {
-  const dropdown = document.getElementById("nav-dropdown-desktop")
+  const dropdown = document.getElementById("nav-dropdown-desktop-1")
 
   if (dropdown.classList.contains("active")) {
     const isClickInside = document
-      .getElementById("nav-dropdown-desktop")
+      .getElementById("nav-dropdown-desktop-1")
       .contains(event.target)
 
     if (!isClickInside) {
-      toggleNavDropdownDesktop()
+      toggleNavDropdownDesktop("nav-dropdown-desktop-1")
+    }
+  }
+})
+
+document.addEventListener("click", (event) => {
+  const dropdown = document.getElementById("nav-dropdown-desktop-2")
+
+  if (dropdown.classList.contains("active")) {
+    const isClickInside = document
+      .getElementById("nav-dropdown-desktop-2")
+      .contains(event.target)
+
+    if (!isClickInside) {
+      toggleNavDropdownDesktop("nav-dropdown-desktop-2")
     }
   }
 })

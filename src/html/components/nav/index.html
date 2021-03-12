@@ -16,10 +16,10 @@
             >Shop now</a
           >
         </li>
-        <li class="nav-link-dropdown" id="nav-dropdown-desktop">
+        <li class="nav-link-dropdown" id="nav-dropdown-desktop-1">
           <button
             class="nav-link-dropdown-button"
-            onclick="toggleNavDropdownDesktop()"
+            onclick="toggleNavDropdownDesktop('nav-dropdown-desktop-1')"
           >
             <span class="nav-link">Box extras</span>
             <span class="icon-chevron-down"></span>
@@ -42,13 +42,33 @@
     <a class="nav-layout-center" href="/"
       >@@include('../assets/logo-dark.html')</a
     >
-
     <div class="nav-layout-right">
       <ul class="nav-link-group nav-desktop">
-        <li><a class="nav-link" href="/our-story.html">Our story</a></li>
-        <li>
-          <a class="nav-link" href="/frequently-asked-questions.html">FAQs</a>
+        <li class="nav-link-dropdown" id="nav-dropdown-desktop-2">
+          <button
+            class="nav-link-dropdown-button nav-link-dropdown-button-right"
+            onclick="toggleNavDropdownDesktop('nav-dropdown-desktop-2')"
+          >
+            <span class="nav-link">Help</span>
+            <span class="icon-chevron-down"></span>
+          </button>
+          <ul class="nav-link-dropdown-contents">
+            <li>
+              <a class="nav-link" href="/how-to-use-our-lawn-feed.html"
+                >How to use</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/frequently-asked-questions.html"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="/contact-us.html">Contact us</a>
+            </li>
+          </ul>
         </li>
+        <li><a class="nav-link" href="/our-story.html">Our story</a></li>
       </ul>
       <button class="button-circle" onclick="showNavPanel('basket-drawer')">
         <span class="icon-bag"></span>

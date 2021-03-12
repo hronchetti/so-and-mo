@@ -140,6 +140,14 @@
           position: relative;
           padding-right: 1.5rem;
 
+          &.nav-link-dropdown-button-right {
+            margin: 0;
+
+            .nav-link {
+              margin-left: 0;
+            }
+          }
+
           .nav-link {
             margin-right: 0;
           }
