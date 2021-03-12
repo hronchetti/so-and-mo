@@ -140,63 +140,6 @@ const updateCarouselTiles = (direction) => {
   updateCarouselToTile(newTile)
 }
 
-// Products -- Lawn Feed -- Options
-
-const toggleProductOptions = () => {
-  // Option Group Visibility
-  const optionGroupColourIndicator = document.getElementById(
-    "options-colour-indicator"
-  )
-  const optionGroupNoIndicator = document.getElementById("options-no-indicator")
-
-  optionGroupNoIndicator.classList.toggle("active")
-  optionGroupColourIndicator.classList.toggle("active")
-
-  // Changing value of radio button
-  // Colour indicator options
-  const indicatorNoSprayer = document.getElementById(
-    "colour-indicator-no-sprayer"
-  )
-  const indicatorSmallSprayer = document.getElementById(
-    "colour-indicator-small-sprayer"
-  )
-  const indicatorLargeSprayer = document.getElementById(
-    "colour-indicator-large-sprayer"
-  )
-  // No indicator options
-  const noIndicatorNoSprayer = document.getElementById(
-    "no-indicator-no-sprayer"
-  )
-  const noIndicatorSmallSprayer = document.getElementById(
-    "no-indicator-small-sprayer"
-  )
-  const noIndicatorLargeSprayer = document.getElementById(
-    "no-indicator-large-sprayer"
-  )
-
-  if (indicatorNoSprayer.checked) {
-    // Check no indicator - no sprayer
-    noIndicatorNoSprayer.checked = true
-  } else if (indicatorSmallSprayer.checked) {
-    // Check no indicator - small sprayer
-    noIndicatorSmallSprayer.checked = true
-  } else if (indicatorLargeSprayer.checked) {
-    // Check no indicator - large sprayer
-    noIndicatorLargeSprayer.checked = true
-  } else if (noIndicatorNoSprayer.checked) {
-    // Check indicator - no sprayer
-    indicatorNoSprayer.checked = true
-  } else if (noIndicatorSmallSprayer.checked) {
-    // Check indicator - small sprayer
-    indicatorSmallSprayer.checked = true
-  } else if (noIndicatorLargeSprayer.checked) {
-    // Check indicator - large sprayer
-    indicatorLargeSprayer.checked = true
-  } else {
-    console.log("Could not find variant")
-  }
-}
-
 // Products -- Lawn Feed -- Modals
 
 const showProductModal = (id) => {
