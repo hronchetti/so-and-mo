@@ -92,11 +92,6 @@
     .product-header-options {
       margin-top: 0.75rem;
       @include flex-space-between;
-      display: none;
-
-      &.active {
-        display: flex;
-      }
 
       .product-header-option {
         width: calc((100% - 1.5rem) / 3);

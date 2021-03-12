@@ -94,22 +94,6 @@
             >
               How long will your box last?
             </button>
-            <div>
-              <label class="checkbox-wrapper">
-                <input
-                  id="colour-indicator"
-                  name="colour-indicator"
-                  type="checkbox"
-                  checked
-                  onclick="toggleProductOptions()"
-                />
-                <span class="checkbox"></span>
-                <span class="checkbox-label"
-                  >Track where you’ve sprayed, include our Colour Indicator
-                  (£25.00)</span
-                >
-              </label>
-            </div>
             <div
               class="modal"
               id="lawn-measurement"
@@ -124,74 +108,7 @@
               <section class="modal-body rich-text"></section>
             </div>
           </div>
-          <div
-            id="options-colour-indicator"
-            class="product-header-options active"
-          >
-            <label class="product-header-option">
-              <div class="product-header-option-header"></div>
-              <input
-                type="radio"
-                name="variant"
-                id="colour-indicator-no-sprayer"
-                value="colour-indicator-no-sprayer"
-              />
-              <div class="product-header-option-body">
-                <span class="product-header-option-price"
-                  ><span class="product-header-option-price-currency">£</span
-                  ><span class="product-header-option-price-value">114</span
-                  >.99</span
-                >
-                <span class="product-header-option-name"
-                  >No sprayer<br />(you have a sprayer)</span
-                >
-              </div>
-            </label>
-            <label class="product-header-option">
-              <div class="product-header-option-header">
-                <span class="product-header-option-hint">Most popular</span>
-              </div>
-              <input
-                type="radio"
-                name="variant"
-                checked
-                id="colour-indicator-small-sprayer"
-                value="colour-indicator-small-sprayer"
-              />
-              <div
-                class="product-header-option-body product-header-option-body-hint"
-              >
-                <span class="product-header-option-price"
-                  ><span class="product-header-option-price-currency">£</span
-                  ><span class="product-header-option-price-value">143</span
-                  >.99</span
-                >
-                <span class="product-header-option-name"
-                  >Handheld sprayer<br />(great for small lawns)
-                </span>
-              </div>
-            </label>
-            <label class="product-header-option">
-              <div class="product-header-option-header"></div>
-              <input
-                type="radio"
-                name="variant"
-                id="colour-indicator-large-sprayer"
-                value="colour-indicator-large-sprayer"
-              />
-              <div class="product-header-option-body">
-                <span class="product-header-option-price"
-                  ><span class="product-header-option-price-currency">£</span
-                  ><span class="product-header-option-price-value">194</span
-                  >.99</span
-                >
-                <span class="product-header-option-name"
-                  >Backpack sprayer<br />(great for large lawns)</span
-                >
-              </div>
-            </label>
-          </div>
-          <div id="options-no-indicator" class="product-header-options">
+          <div class="product-header-options">
             <label class="product-header-option">
               <div class="product-header-option-header"></div>
               <input
@@ -220,6 +137,7 @@
                 name="variant"
                 id="no-indicator-small-sprayer"
                 value="no-indicator-small-sprayer"
+                checked
               />
               <div
                 class="product-header-option-body product-header-option-body-hint"
