@@ -119,6 +119,7 @@
   font-weight: 300;
   text-decoration: underline;
   cursor: pointer;
+  color: $grey-dark;
 
   @media (hover: hover) {
     &:hover {

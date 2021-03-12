@@ -77,7 +77,7 @@
   .product-header-content {
     padding: 1rem 1.25rem 0;
 
-    .product-header-content-tick-bullet-group-standard-product {
+    .tick-bullet-group {
       padding-bottom: 0.5rem;
     }
 
@@ -85,13 +85,18 @@
       padding-bottom: 0.5rem;
     }
 
-    .select-wrapper {
-      max-width: 284px;
+    .checkbox-wrapper {
+      margin: 1rem 0 0 0;
     }
 
     .product-header-options {
       margin-top: 0.75rem;
       @include flex-space-between;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
 
       .product-header-option {
         width: calc((100% - 1.5rem) / 3);
@@ -99,6 +104,7 @@
         text-align: center;
         font: 300 0.6875rem/0.9375rem $font;
         margin: 0;
+        user-select: none;
 
         .product-header-option-header {
           height: calculate-rem(19px);
@@ -356,8 +362,12 @@
     .product-header-content {
       padding: 1.5rem 3rem;
 
-      .product-header-content-tick-bullet-group-standard-product {
+      .tick-bullet-group {
         padding-bottom: 0.75rem;
+      }
+
+      .checkbox-wrapper {
+        margin: 1.25rem 0 0 0;
       }
 
       .product-header-content-plain-text {
