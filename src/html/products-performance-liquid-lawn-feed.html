@@ -94,18 +94,17 @@
             >
               How long will your box last?
             </button>
-            <div
-              class="modal"
-              id="lawn-measurement"
-              onclick="hideAllProductModals()"
-            >
+            <div class="modal" id="lawn-measurement">
               <header class="modal-header">
                 <h3 class="heading-small">Measure your lawn</h3>
-                <button class="button-circle">
+                <button class="button-circle" onclick="hideAllProductModals()">
                   <span class="icon-cross"></span>
                 </button>
               </header>
-              <section class="modal-body rich-text"></section>
+              <section
+                class="modal-body rich-text"
+                id="lawn-measurement-tool"
+              ></section>
             </div>
           </div>
           <div class="product-header-options">
@@ -182,14 +181,10 @@
               Check your sprayer
             </button>
           </span>
-          <div
-            class="modal"
-            id="check-your-sprayer"
-            onclick="hideAllProductModals()"
-          >
+          <div class="modal" id="check-your-sprayer">
             <header class="modal-header">
               <h3 class="heading-small">Check your sprayer</h3>
-              <button class="button-circle">
+              <button class="button-circle" onclick="hideAllProductModals()">
                 <span class="icon-cross"></span>
               </button>
             </header>
@@ -303,5 +298,14 @@
     @@include('./components/footer/index.html')
     <!-- Scripts -->
     <script src="js/index.min.js"></script>
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="js/lawn-measurement-tool/index.min.js"></script>
   </body>
 </html>

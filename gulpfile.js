@@ -37,10 +37,10 @@ const buildScss = () => {
 }
 
 const buildJS = () => {
-  return src(srcPath + "js/*.js")
+  return src(srcPath + "js/**/*.js")
     .pipe(
       babel({
-        presets: ["@babel/env"],
+        presets: ["@babel/env", "@babel/preset-react"],
       })
     )
     .pipe(uglify())
