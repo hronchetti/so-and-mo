@@ -15,14 +15,19 @@
       </div>
     </header>
     <main class="wrapper-width wrapper-height-bottom-only">
-      <div class="our-story">
+      <div class="our-story" id="our-story-section">
         <div class="our-story-progress">
-          <span class="our-story-progress-bar"></span>
+          <span
+            id="our-story-progrss-bar"
+            class="our-story-progress-bar"
+          ></span>
         </div>
         <div class="our-story-content">
-          <section class="our-story-content-section active">
+          <section class="our-story-content-section">
             <div>
-              <h2 class="heading-medium our-story-content-section-heading">
+              <h2
+                class="heading-medium our-story-content-section-heading active"
+              >
                 Why we started
               </h2>
             </div>
@@ -90,9 +95,10 @@
     <!-- Scripts -->
     <script src="js/index.min.js"></script>
     <script>
-      const updateScrollProgress = () => {}
-
-      window.addEventListener("scroll", updateScrollProgress)
+      window.addEventListener("scroll", () => {
+        updateScrollProgress()
+        activateStep()
+      })
     </script>
   </body>
 </html>

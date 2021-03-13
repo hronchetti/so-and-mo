@@ -257,3 +257,40 @@ const toggleFormState = (event, newState) => {
     console.log("Form state not specified")
   }
 }
+
+// Our Story
+
+const updateScrollProgress = () => {
+  const storySection = document.getElementById("our-story-section")
+  const storySectionHeight = storySection.scrollHeight
+  const scrollPercentage = (window.scrollY / storySectionHeight) * 100
+
+  const scrollPercentageReverse = 100 - scrollPercentage
+
+  // Much better for performance to animate tranform than height
+  if (scrollPercentage <= 100) {
+    document.getElementById(
+      "our-story-progrss-bar"
+    ).style.transform = `translate3d(0, -${scrollPercentageReverse.toString()}%, 0)`
+  }
+}
+
+const activateStep = () => {
+  // const storySection = document.getElementById("our-story-section")
+  // const storySectionHeight = storySection.scrollHeight
+  // const scrollAmount = window.scrollY / storySectionHeight
+
+  const OurStorySteps = document.getElementsByClassName(
+    "our-story-content-section-heading"
+  )
+  for (let i = 0; i < OurStorySteps.length; i++) {
+    const dotPosition =
+      OurStorySteps[i].offsetTop + OurStorySteps[i].offsetHeight / 2 - 12
+
+    if (window.scrollY > dotPosition) {
+      OurStorySteps[i].classList.add("active")
+    } else {
+      OurStorySteps[i].classList.remove("active")
+    }
+  }
+}

@@ -8,11 +8,13 @@
     position: absolute;
     left: calculate-rem(5px);
     top: 0.875rem; // 50% of heading line-height
+    overflow: hidden;
 
     .our-story-progress-bar {
       @include animation-preset;
       width: 100%;
-      height: 1%;
+      height: 100%;
+      transform: translate3d(0, -100%, 0);
       background-color: $blue-extra-dark;
       display: block;
     }
@@ -28,8 +30,8 @@
         margin-top: 0;
       }
 
-      &.active {
-        .our-story-content-section-heading {
+      .our-story-content-section-heading {
+        &.active {
           &::before {
             background-color: $blue-extra-dark;
             border-color: $blue-extra-dark;
