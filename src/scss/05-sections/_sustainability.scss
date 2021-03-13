@@ -20,12 +20,15 @@
     }
 
     .sustainability-section-ecologi {
+      text-decoration: none;
+      display: block;
       background-color: white;
       border-radius: 0.75rem;
       padding: 0.5rem 0.75rem 0.25rem 0.75rem;
       margin-bottom: 1rem;
 
       .sustainability-section-ecologi-heading {
+        text-decoration: none;
         display: block;
         font: 500 0.75rem/1rem $font;
         color: $grey-extra-dark;
