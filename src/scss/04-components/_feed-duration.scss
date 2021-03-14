@@ -1,0 +1,32 @@
+// Styles for React App
+.feed-duration {
+  .feed-duration-header {
+    .feed-duration-header-right {
+      @include flex-justify-end;
+    }
+  }
+
+  .feed-duration-guidance {
+    @include flex-justify-start;
+    align-items: center;
+
+    .map-marker {
+      height: 1.5rem;
+      margin-right: 0.625rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .feed-duration {
+    .feed-duration-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+}

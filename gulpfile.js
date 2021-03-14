@@ -37,15 +37,21 @@ const buildScss = () => {
 }
 
 const buildJS = () => {
-  return src(srcPath + "js/**/*.js")
+  return src(srcPath + "js/*.js")
     .pipe(
       babel({
-        presets: ["@babel/env", "@babel/preset-react"],
+        presets: ["@babel/env"],
       })
     )
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest(distPath + "js/"))
+}
+
+const copyReact = () => {
+  return src(srcPath + "js/lawn-measurement-tool/*.js").pipe(
+    dest(distPath + "js/lawn-measurement-tool/")
+  )
 }
 
 const buildHTML = () => {
@@ -89,6 +95,6 @@ exports.default = () => {
   ]).on("change", browserSync.reload)
 }
 
-exports.build = series([buildJS, buildScss, buildHTML, buildStatic])
+exports.build = series([buildJS, buildScss, buildHTML, copyReact, buildStatic])
 
 exports.clean = series(cleanBuild)
