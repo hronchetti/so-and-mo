@@ -55,7 +55,7 @@
       }
 
       .footer-form-input {
-        .button-green {
+        .footer-form-input-button {
           width: 100%;
           margin-top: 0.75rem;
         }
@@ -124,10 +124,15 @@
         .footer-form-input {
           display: grid;
           grid-template-columns: 1fr 7.75rem;
-          gap: 1.25rem;
+          gap: 0 1.25rem;
 
-          .button-green {
+          .footer-form-input-field {
+            grid-column: 1/2;
+          }
+
+          .footer-form-input-button {
             margin: 0;
+            grid-column: 2/3;
           }
         }
       }

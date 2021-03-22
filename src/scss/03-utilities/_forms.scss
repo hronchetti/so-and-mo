@@ -30,8 +30,10 @@ textarea,
   padding: 0.625rem 1.125rem;
   width: 100%;
   appearance: none;
-  resize: none;
+  -webkit-appearance: none;
   -moz-appearance: textfield;
+  resize: none;
+  border-style: solid;
 
   &.error {
     border-color: #d94e65;
