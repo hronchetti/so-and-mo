@@ -161,6 +161,16 @@ const hideAllProductModals = () => {
   document.getElementsByTagName("body")[0].style.overflow = "visible"
 }
 
+// Products -- Scroll to Reivews
+
+const scrollToReviews = () => {
+  document.getElementById("reviews").scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "nearest",
+  })
+}
+
 // Products -- Lawn Feed -- Bottle Viewer
 
 const viewMonth = (monthButton, month) => {
@@ -188,7 +198,7 @@ const viewMonth = (monthButton, month) => {
   }
 }
 
-// Producst -- Lawn Feed -- Nutrients
+// Products -- Lawn Feed -- Nutrients
 
 const toggleNutrient = (nutrientButton) => {
   const wasActive = nutrientButton.classList.contains("active")

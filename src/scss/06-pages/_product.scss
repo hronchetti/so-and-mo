@@ -77,6 +77,10 @@
   .product-header-content {
     padding: 1rem 1.25rem 0;
 
+    .product-header-content-reviews {
+      padding-top: 0.5rem;
+    }
+
     .tick-bullet-group {
       padding-bottom: 0.5rem;
     }
@@ -357,8 +361,12 @@
     .product-header-content {
       padding: 1.5rem 3rem;
 
+      .product-header-content-reviews {
+        padding-top: 0.75rem;
+      }
+
       .tick-bullet-group {
-        padding-bottom: 0.75rem;
+        padding: 1.25rem 0 0.75rem 0;
       }
 
       .checkbox-wrapper {
