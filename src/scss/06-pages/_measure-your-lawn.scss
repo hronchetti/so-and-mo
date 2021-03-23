@@ -1,0 +1,11 @@
+.measure-your-lawn-page {
+  max-width: 50rem;
+  margin: 0 auto 2rem auto;
+}
+
+@media only screen and (min-width: 900px) {
+  .measure-your-lawn-page {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+}

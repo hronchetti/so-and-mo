@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('./components/head.html')
+    <title>Measure your lawn</title>
+  </head>
+  <body>
+    @@include('./components/nav/index.html')
+    <header class="header">
+      <section class="wrapper-width">
+        <h1 class="heading-large divider-heading divider-heading-centered">
+          Measure your lawn
+        </h1>
+        <div class="divider divider-centered">
+          @@include('./components/assets/divider.html')
+        </div>
+        <div class="measure-your-lawn-page" id="measure-your-lawn"></div>
+      </section>
+      <div class="bottle-squad">
+        <div class="wrapper-width bottle-squad-bottles">
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/01-feb-bottle.png"
+            alt="February Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/02-apr-bottle.png"
+            alt="April Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/03-jun-bottle.png"
+            alt="June Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/04-aug-bottle.png"
+            alt="August Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/05-oct-bottle.png"
+            alt="October Liquid Lawn Feed Bottle"
+          />
+          <img
+            class="bottle-squad-bottle"
+            src="/assets/bottles/06-dec-bottle.png"
+            alt="December Liquid Lawn Feed Bottle"
+          />
+        </div>
+        <div class="bottle-squad-grass">
+          @@include('./components/assets/grass-row-blue-dark.html')
+        </div>
+      </div>
+    </header>
+    @@include('./components/footer/index.html')
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+    <script src="js/lawn-measurement-tool/2.b4435e19.chunk.js"></script>
+    <script src="js/lawn-measurement-tool/main.c960c08b.chunk.js"></script>
+    <script src="js/lawn-measurement-tool/runtime-main.a0e83100.js"></script>
+  </body>
+</html>
