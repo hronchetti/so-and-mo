@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('./components/head.html')
+    <title>So & Mo Blog</title>
+  </head>
+  <body>
+    @@include('./components/nav/index.html')
+    <header class="header">
+      <section class="wrapper-width">
+        <h1 class="heading-large divider-heading divider-heading-centered">
+          Blog
+        </h1>
+        <div class="divider divider-centered">
+          @@include('./components/assets/divider.html')
+        </div>
+      </section>
+    </header>
+    <main class="background-grey-extra-light">
+      <section class="wrapper-width blog-page">
+        <section class="blog-page-filters">
+          <button class="blog-page-button active">All</button>
+          <button class="blog-page-button">So & Mo News</button>
+          <button class="blog-page-button">Lawn Care Tips</button>
+        </section>
+        <section class="blog-page-articles">
+          <a
+            class="blog-page-article blog-page-article-first"
+            href="/blog-article.html"
+          >
+            <div class="blog-page-article-image">
+              <img src="/temp/blog-image.jpg" alt="Blog image" />
+            </div>
+            <div class="blog-page-article-content">
+              <h2 class="heading-medium">3 secrets to a beautiful lawn</h2>
+              <div class="blog-page-article-stats">
+                <span>3rd Apr 2021</span>
+                <span>&bull;</span>
+                <span>Lawn Care tips</span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="blog-page-author">
+                <img
+                  class="blog-page-author-image"
+                  src="/temp/luke-author-image.png"
+                  alt="Luke Taylor"
+                />
+                <span class="blog-page-author-name"
+                  >Luke Taylor, Co-founder of So & Mo</span
+                >
+              </div>
+            </div>
+          </a>
+          <a class="blog-page-article" href="/blog-article.html">
+            <div class="blog-page-article-image">
+              <img src="/temp/blog-image-2.jpg" alt="Blog image" />
+            </div>
+            <div class="blog-page-article-content">
+              <h2 class="heading-small">
+                How to make sure your lawn is safe for all the family
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="blog-page-article-stats">
+                <span>2nd Apr 2021</span>
+                <span>&bull;</span>
+                <span>Lawn Care tips</span>
+              </div>
+            </div>
+          </a>
+          <a class="blog-page-article" href="/blog-article.html">
+            <div class="blog-page-article-image">
+              <img src="/temp/blog-image-3.jpg" alt="Blog image" />
+            </div>
+            <div class="blog-page-article-content">
+              <h2 class="heading-small">
+                How to repair your lawn after winter damage
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="blog-page-article-stats">
+                <span>1st Apr 2021</span>
+                <span>&bull;</span>
+                <span>Lawn Care tips</span>
+              </div>
+            </div>
+          </a>
+          <a class="blog-page-article" href="/blog-article.html">
+            <div class="blog-page-article-image">
+              <img src="/temp/blog-image-4.jpg" alt="Blog image" />
+            </div>
+            <div class="blog-page-article-content">
+              <h2 class="heading-small">
+                Should you use sprinklers on your lawn?
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="blog-page-article-stats">
+                <span>31st Mar 2021</span>
+                <span>&bull;</span>
+                <span>Lawn Care tips</span>
+              </div>
+            </div>
+          </a>
+        </section>
+        <section class="blog-page-pagination">
+          <button class="blog-page-button active">1</button>
+          <button class="blog-page-button">2</button>
+          <button class="blog-page-button">3</button>
+        </section>
+      </section>
+    </main>
+    @@include('./components/sections/product-guarantee.html')
+    @@include('./components/footer/index.html')
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

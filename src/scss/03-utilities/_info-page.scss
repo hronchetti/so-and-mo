@@ -3,7 +3,12 @@
   grid-template-columns: 1fr;
   gap: 1rem;
 
-  .heading-small {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 0.75rem;
   }
 }
@@ -21,7 +26,12 @@
         margin-bottom: 1.5rem;
       }
 
-      .heading-small {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         margin-bottom: 1.25rem;
       }
     }
