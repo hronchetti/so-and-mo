@@ -304,3 +304,17 @@ const activateStep = () => {
     }
   }
 }
+
+// Homepage Video
+
+const showVideo = () => {
+  document.getElementById("video-overlay").classList.add("active")
+  document.getElementById("homepage-video").classList.add("active")
+  document.getElementsByTagName("body")[0].style.overflow = "hidden"
+}
+
+const hideVideo = () => {
+  document.getElementById("video-overlay").classList.remove("active")
+  document.getElementById("homepage-video").classList.remove("active")
+  document.getElementsByTagName("body")[0].style.overflow = "visible"
+}
