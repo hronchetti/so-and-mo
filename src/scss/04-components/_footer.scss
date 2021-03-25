@@ -94,6 +94,16 @@
         }
       }
     }
+
+    .footer-payment-options {
+      @include flex-justify-start;
+      margin-top: 1.25rem;
+
+      .footer-payment-options-card {
+        height: 1.5rem;
+        margin: 0.25rem 0.5rem 0.25rem 0rem;
+      }
+    }
   }
 
   .footer-grass {
@@ -156,7 +166,7 @@
         }
 
         .footer-copyright {
-          margin-top: calculate-rem(123px);
+          margin-top: calculate-rem(167px);
         }
       }
 
@@ -167,6 +177,7 @@
           padding: 0;
         }
       }
+
       .footer-extra-links {
         @include flex-justify-start;
 
@@ -176,6 +187,10 @@
             margin: 0.5rem 1rem 0.5rem 0;
           }
         }
+      }
+
+      .footer-payment-options {
+        margin-top: 0;
       }
     }
 
