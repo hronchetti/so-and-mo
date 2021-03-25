@@ -34,6 +34,47 @@
     .nav-desktop {
       display: none;
     }
+
+    .nav-layout-right {
+      .button-circle {
+        &.filled {
+          @media (hover: hover) {
+            &:hover {
+              .icon-bag {
+                &:after {
+                  border-color: $grey-light;
+                }
+              }
+            }
+          }
+
+          &:focus {
+            .icon-bag {
+              &:after {
+                border-color: $grey-light;
+              }
+            }
+          }
+
+          .icon-bag {
+            position: relative;
+
+            &:after {
+              display: block;
+              content: "";
+              position: absolute;
+              top: 0;
+              right: -7px;
+              width: 0.625rem;
+              height: 0.625rem;
+              border-radius: 50%;
+              background-color: $green;
+              border: 0.125rem solid white;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
