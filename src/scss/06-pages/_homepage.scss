@@ -67,12 +67,14 @@
       margin-top: 0.25rem;
       display: block;
       font: 500 0.875rem/1.25rem $font;
+      color: $grey-dark;
     }
   }
 }
 
 .benefits {
   margin-bottom: 1.5rem;
+
   .benefit {
     .benefit-illustration {
       width: 3rem;
