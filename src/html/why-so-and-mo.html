@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('./components/head.html')
+    <title>Our Story</title>
+  </head>
+  <body>
+    @@include('./components/nav/index.html')
+    <header class="wrapper-width header">
+      <h1 class="heading-large divider-heading divider-heading-centered">
+        Why So &amp; Mo&trade;?
+      </h1>
+      <div class="divider divider-centered">
+        @@include('./components/assets/divider.html')
+      </div>
+    </header>
+    <main>
+      <section
+        class="wrapper-width wrapper-height-bottom-only image-section-large"
+      >
+        <div class="image-section-large-image image-section-large-image-graph">
+          <img
+            src="/temp/so-and-mo-lawn-performance-graph.jpg"
+            alt="So & Mo Lawn Performance Graph"
+          />
+        </div>
+        <div class="image-section-large-content">
+          <h2 class="heading-small">No more peaks and troughs</h2>
+          <p class="image-section-large-content-paragraph">
+            Tired of your green lawn only lasting a few weeks? Our plan uses
+            liquified nutrients to keep your lawn perfect all year.
+          </p>
+          <ul class="tick-bullet-group tick-bullet-group-green">
+            <!-- prettier-ignore -->
+            @@loop('./components/tick-bullet-light-text.html', [
+            {"text": "6 applications per year, perfectly timed for consistently green results"}, 
+            {"text": "Join anytime, every feed has the perfect nutrients your lawn needs for a given season"}, 
+            {"text": "Professionally designed plan, created by industry-leading experts who look after lawns "} 
+          ])
+          </ul>
+        </div>
+      </section>
+      <section class="background-grey-extra-light">
+        <section class="wrapper-width wrapper-height image-section-large">
+          <div class="image-section-large-content">
+            <h2 class="heading-small">Precision application liquid feed</h2>
+            <p class="image-section-large-content-paragraph">
+              Fed up with granular feed spreaders making a mess? Our liquid lawn
+              feed keeps waste to a minimum and gives you complete control on
+              where your feed goes.
+            </p>
+            <ul class="tick-bullet-group tick-bullet-group-green">
+              <!-- prettier-ignore -->
+              @@loop('./components/tick-bullet-light-text.html', [
+            {"text": "No mess, our sprayers use flat fan nozzles for precision application"}, 
+            {"text": "No waste, keep any feed you don’t use for your next application"}, 
+            {"text": "No hassel, store our feed outside without damage"} 
+          ])
+            </ul>
+          </div>
+          <div class="image-section-large-image">
+            <img
+              src="/temp/so-and-mo-lawn.jpg"
+              alt="So & Mo Lawn Performance Graph"
+            />
+          </div>
+        </section>
+      </section>
+      <section class="wrapper-width wrapper-height image-section-large">
+        <div class="image-section-large-image">
+          <img
+            src="/temp/so-and-mo-lawn.jpg"
+            alt="So & Mo Lawn Performance Graph"
+          />
+        </div>
+        <div class="image-section-large-content">
+          <h2 class="heading-small">All the feed you need in 1 delivery</h2>
+          <p class="image-section-large-content-paragraph">
+            Care about the environment? So do we. Get your full So & Mo™ plan in
+            1 box, made from 100% recyclable packaging.
+          </p>
+          <ul class="tick-bullet-group tick-bullet-group-green">
+            <!-- prettier-ignore -->
+            @@loop('./components/tick-bullet-light-text.html', [
+            {"text": "No waiting around, already have your feed when your lawn needs it"}, 
+            {"text": "Less deliveries, saving you time, money and reducing emissions"}, 
+            {"text": "Less packaging, reducing waste"} 
+          ])
+          </ul>
+        </div>
+      </section>
+    </main>
+    @@include('./components/sections/product-guarantee.html')
+    @@include('./components/footer/index.html')
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

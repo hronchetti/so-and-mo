@@ -6,22 +6,76 @@
   </head>
   <body>
     @@include('./components/nav/index.html')
-    <header class="background-green header-homepage">
+    <header class="header-homepage">
       <div class="wrapper-width text-centered">
-        <h1 class="heading-extra-large">The lawn feed that actually works</h1>
-        <p class="header-homepage-value-proposition">
-          Ensure your lawn never goes hungry again
+        <h1 class="heading-extra-large">
+          The perfect lawn that lasts all year
+        </h1>
+        <p>
+          Our eco-friendly liquid lawn feed gives you a Wimbledon-worthy lawn
+          all year with only 6 applications.
         </p>
         <a
           class="button-blue"
           href="/products-performance-liquid-lawn-feed.html"
-          >Shop now</a
+          >The So &amp; Mo&trade; plan</a
         >
       </div>
-      <img class="header-homepage-bottles" src="/assets/liquid-lawn-feed.png" />
+      <div class="homepage-header-background">
+        <div class="header-homepage-backgroud-overlay"></div>
+        <img
+          class="header-homepage-background-image"
+          src="/temp/so-and-mo-lawn.jpg"
+          alt="Perfectly green lawn"
+        />
+      </div>
     </header>
     <main>
       <section class="background-white">
+        <section class="wrapper-width wrapper-height customer-photos">
+          <h2 class="heading-medium">From just £7.50 per application</h2>
+          <div id="text-banner-widget"></div>
+          <section class="grid-4">
+            <div class="customer-photo">
+              <div class="customer-photo-image">
+                <img src="/temp/so-and-mo-lawn.jpg" alt="Desc" />
+              </div>
+              <span class="customer-photo-quote">
+                “Great service and what an amazing product! My lawn has never
+                looked so good!”
+              </span>
+            </div>
+            <div class="customer-photo">
+              <div class="customer-photo-image">
+                <img src="/temp/so-and-mo-lawn.jpg" alt="Desc" />
+              </div>
+              <span class="customer-photo-quote">
+                “The feed made a huge difference to us over the winter. Can’t
+                wait to get the spring one 🙌”
+              </span>
+            </div>
+            <div class="customer-photo">
+              <div class="customer-photo-image">
+                <img src="/temp/so-and-mo-lawn.jpg" alt="Desc" />
+              </div>
+              <span class="customer-photo-quote">
+                “Great service and what an amazing product! My lawn has never
+                looked so good!”
+              </span>
+            </div>
+            <div class="customer-photo">
+              <div class="customer-photo-image">
+                <img src="/temp/so-and-mo-lawn.jpg" alt="Desc" />
+              </div>
+              <span class="customer-photo-quote">
+                “It works! We saw great results in less than a week. Would
+                recommend"
+              </span>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="background-grey-extra-light">
         <section class="wrapper-width wrapper-height">
           <h2 class="heading-medium divider-heading divider-heading-centered">
             Everyone can be a lawn expert...with a little help
@@ -78,15 +132,13 @@
             </div>
           </section>
           <div class="benefit-button">
-            <a
-              class="button-blue"
-              href="/products-performance-liquid-lawn-feed.html"
-              >Shop now</a
+            <a class="button-blue" href="/why-so-and-mo.html"
+              >Why So &amp; Mo&trade;?</a
             >
           </div>
         </section>
       </section>
-      <section class="background-grey-extra-light">
+      <section class="background-white">
         <section
           class="wrapper-width wrapper-height grid-2 image-section dropbox-image-section"
         >
@@ -146,45 +198,25 @@
           </div>
         </section>
       </section>
-      <section class="background-white">
-        <section class="wrapper-width wrapper-height grid-2 image-section">
-          <div>
-            <img
-              class="image-section-image"
-              src="/assets/so-and-mo-luke-and-marc.jpg"
-              alt="Luke and Marc
-            from So & Mo"
-            />
-          </div>
-          <div>
-            <div class="image-section-text">
-              <h2 class="heading-large divider-heading">‘The Grass Gurus’</h2>
-              <div class="divider">
-                @@include('./components/assets/divider.html')
-              </div>
-              <p>
-                We’ve been transforming professional lawns for years.We thought
-                it was time for you to have as much fun as we do!
-              </p>
-              <p>
-                As Professional Agronomists, we’ve engineered the perfect lawn
-                feed to keep your grass healthy and vibrant year-round.
-              </p>
-              <p>
-                With just 6 feeds a year, we’re on a mission to make perfect
-                lawn achievable for everyone.
-              </p>
-              <a class="button-link-arrow" href="/our-story.html">Our story</a>
-            </div>
-          </div>
-        </section>
-      </section>
       <div class="overlay" id="video-overlay" onclick="hideVideo()"></div>
       @@include('./components/sections/sustainability.html')
       @@include('./components/sections/product-guarantee.html')
     </main>
     @@include('./components/footer/index.html')
     <!-- Scripts -->
+    <script
+      src="https://widget.reviews.co.uk/rich-snippet-reviews-widgets/dist.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      richSnippetReviewsWidgets("text-banner-widget", {
+        store: "soandmo.com",
+        starsClr: "#f47e27",
+        textClr: "#313131",
+        logoClr: "black",
+        widgetName: "text-banner",
+      })
+    </script>
     <script src="js/index.min.js"></script>
   </body>
 </html>

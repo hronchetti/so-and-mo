@@ -17,6 +17,13 @@
     position: relative;
     padding: 0 0 0.5rem 1.625rem;
 
+    &.tick-bullet-light-text {
+      .tick-bullet-text {
+        font: 300 0.875rem/1.25rem $font;
+        color: $grey-dark;
+      }
+    }
+
     &:before {
       content: "";
       position: absolute;
@@ -52,6 +59,13 @@
 
     .tick-bullet {
       padding-left: 2rem;
+
+      &.tick-bullet-light-text {
+        .tick-bullet-text {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
 
       &:before {
         width: 1.25rem;
